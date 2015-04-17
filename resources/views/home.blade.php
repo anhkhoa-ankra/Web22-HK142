@@ -12,7 +12,7 @@
 			<img src="./images/business_1.jpg">
 		</div>
 		<div class="col-sm-5">
-			<h4>Đà Nẵng tiếp tục dẫn đầu về năng lực cạnh tranh cấp tỉnh</h4>
+			<h4><a href="/post">Đà Nẵng tiếp tục dẫn đầu về năng lực cạnh tranh cấp tỉnh</a></h4>
 			<span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span>
 			<span class="sr-only">Time:</span> APRIL 15, 2015
 			<a href="#">
@@ -32,7 +32,7 @@
 					<div class="row">
 						<div class="col-sm-5"><img src="./images/business_2.jpg"></div>
 						<div class="col-sm-7">
-							<p class="content-news-2">ZUCKERBERG AND FREE INTERNET IN EUROPE.</p>
+							<a class="content-news-2" href="/post">ZUCKERBERG AND FREE INTERNET IN EUROPE.</a>
 							<p class="content-news-3">
 							<span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span>
 							<span class="sr-only">Time:</span> APRIL 15, 2015
@@ -46,7 +46,7 @@
 					<div class="row">
 						<div class="col-sm-5"><img src="./images/business_3.jpg"></div>
 						<div class="col-sm-7">
-							<p class="content-news-2">GOOGLE ANTITRUST INQUIRIES.</p>
+							<a class="content-news-2" href="/post">GOOGLE ANTITRUST INQUIRIES.</a>
 							<p class="content-news-3">
 							<span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span>
 							<span class="sr-only">Time:</span> MAY 05, 2015
@@ -60,7 +60,7 @@
 					<div class="row">
 						<div class="col-sm-5"><img src="./images/business_4.jpg"></div>
 						<div class="col-sm-7">
-							<p class="content-news-2">WEARING VEST MAKE EASY RECRUIT.</p>
+							<a class="content-news-2" href="/post">WEARING VEST MAKE EASY RECRUIT.</a>
 							<p class="content-news-3">
 							<span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span>
 							<span class="sr-only">Time:</span> APRIL 15, 2015
@@ -78,7 +78,7 @@
 					<div class="row">
 						<div class="col-sm-5"><img src="./images/business_5.jpg"></div>
 						<div class="col-sm-7">
-							<p class="content-news-2">BAU DUC DI NUOI BO.</p>
+							<a class="content-news-2" href="/post">BAU DUC DI NUOI BO.</a>
 							<p class="content-news-3">
 							<span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span>
 							<span class="sr-only">Time:</span> JULE 15, 2015
@@ -92,7 +92,7 @@
 					<div class="row">
 						<div class="col-sm-5"><img src="./images/business_6.jpg"></div>
 						<div class="col-sm-7">
-							<p class="content-news-2">EUROPE BANK IS ATTACK.</p>
+							<a class="content-news-2" href="/post">EUROPE BANK IS ATTACK.</a>
 							<p class="content-news-3">
 							<span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span>
 							<span class="sr-only">Time:</span> MARCH 15, 2015
@@ -106,7 +106,7 @@
 					<div class="row">
 						<div class="col-sm-5"><img src="./images/business_7.jpg"></div>
 						<div class="col-sm-7">
-							<p class="content-news-2">THE VIETNAM RICHEST WOMAN.</p>
+							<a class="content-news-2" href="/post">THE VIETNAM RICHEST WOMAN.</a>
 							<p class="content-news-3">
 							<span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span>
 							<span class="sr-only">Time:</span> OCTOBER 15, 2015
@@ -127,7 +127,7 @@
 	<div class="row">
 		<div class="col-sm-6">
 			<img src="./images/news_3.jpg">
-			<h4>Google under siege: Europe wants blood</h4>
+			<h4><a href="/post">Google under siege: Europe wants blood</a></h4>
 			<span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span>
 			<span class="sr-only">Time:</span> APRIL 15, 2015
 			<a href="#">
@@ -145,7 +145,7 @@
 					<div class="row">
 						<div class="col-sm-5"><img src="./images/business_2.jpg"></div>
 						<div class="col-sm-7">
-							<p class="content-news-2">ZUCKERBERG AND FREE INTERNET IN EUROPE.</p>
+							<a class="content-news-2" href="/post">ZUCKERBERG AND FREE INTERNET IN EUROPE.</a>
 							<p class="content-news-3">
 							<span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span>
 							<span class="sr-only">Time:</span> APRIL 15, 2015
@@ -159,7 +159,7 @@
 					<div class="row">
 						<div class="col-sm-5"><img src="./images/business_3.jpg"></div>
 						<div class="col-sm-7">
-							<p class="content-news-2">GOOGLE ANTITRUST INQUIRIES.</p>
+							<a class="content-news-2" href="/post">GOOGLE ANTITRUST INQUIRIES.</a>
 							<p class="content-news-3">
 							<span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span>
 							<span class="sr-only">Time:</span> MAY 05, 2015
@@ -173,7 +173,7 @@
 					<div class="row">
 						<div class="col-sm-5"><img src="./images/business_6.jpg"></div>
 						<div class="col-sm-7">
-							<p class="content-news-2">EUROPE BANK IS ATTACK.</p>
+							<a class="content-news-2" href="/post">EUROPE BANK IS ATTACK.</a>
 							<p class="content-news-3">
 							<span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span>
 							<span class="sr-only">Time:</span> MARCH 15, 2015
@@ -187,7 +187,7 @@
 					<div class="row">
 						<div class="col-sm-5"><img src="./images/business_7.jpg"></div>
 						<div class="col-sm-7">
-							<p class="content-news-2">THE VIETNAM RICHEST WOMAN.</p>
+							<a class="content-news-2" href="/post">THE VIETNAM RICHEST WOMAN.</a>
 							<p class="content-news-3">
 							<span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span>
 							<span class="sr-only">Time:</span> OCTOBER 15, 2015
@@ -238,7 +238,7 @@
 			<h1>Sports</h1>
 		</div>
 		<img src="./images/business_8.jpg">
-		<h4>Working for Manchester United's secretive billionaire Glazers</h4>
+		<h4><a href="/post">Working for Manchester United's secretive billionaire Glazers</a></h4>
 		<span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span>
 		<span class="sr-only">Time:</span> APRIL 15, 2015
 		<a href="#">
@@ -272,7 +272,7 @@
 			<h1>Travelling</h1>
 		</div>
 		<img src="./images/news_5.jpg">
-		<h4>Which Mexican beaches are the safest and best for families?</h4>
+		<h4><a href="/post">Which Mexican beaches are the safest and best for families?</a></h4>
 		<span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span>
 		<span class="sr-only">Time:</span> APRIL 15, 2015
 		<a href="#">
