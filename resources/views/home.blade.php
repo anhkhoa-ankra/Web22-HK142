@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="page-header">
-	<h1>Business</h1>
+	<h1><a href="/category">Business</a></h1>
 </div>
 <div class="article-title">
 	<div class="row content-news">
@@ -121,7 +121,7 @@
 	</div>
 </div>
 <div class="page-header">
-	<h1>Technology</h1>
+	<h1><a href="/category">Technology</a></h1>
 </div>
 <div class="article-title">
 	<div class="row">
@@ -202,7 +202,7 @@
 	</div>
 </div>
 <div class="page-header">
-	<h1>Stay With Us</h1>
+	<h1><a href="/category">Stay With Us</a></h1>
 </div>
 <div class="article-title">
 	<div class="row">
@@ -235,7 +235,7 @@
 <div class="row">
 	<div class="col-sm-6">
 		<div class="page-header">
-			<h1>Sports</h1>
+			<h1><a href="/category">Sports</a></h1>
 		</div>
 		<img src="./images/business_8.jpg">
 		<h4><a href="/post">Working for Manchester United's secretive billionaire Glazers</a></h4>
@@ -269,7 +269,7 @@
 	</div>
 	<div class="col-sm-6">
 		<div class="page-header">
-			<h1>Travelling</h1>
+			<h1><a href="/category">Travelling</a></h1>
 		</div>
 		<img src="./images/news_5.jpg">
 		<h4><a href="/post">Which Mexican beaches are the safest and best for families?</a></h4>
