@@ -22,66 +22,95 @@
     </div>
   </header>
   <div class="container">
-    <nav class="navbar navbar-default">
-      <!-- Brand and toggle get grouped for better mobile display-->
-      <div class="navbar-header">
-        <button type="button" data-toggle="collapse" data-target="#top-navbar-collapse" class="navbar-toggle collapsed">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar">
-        </span>
-        <span class="icon-bar">
-        </span>
-        <span class="icon-bar">
-        </span>
-        </button>
-        <a href="/" class="navbar-brand"><span class="glyphicon glyphicon-home"></span></a>
-      </div>
-      <div id="top-navbar-collapse" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li class="active">
-            <a href="#">
-              Link <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">Link</a>
-          </li>
-          <li class="dropdown">
-            <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">
-              Dropdown <span class="caret">
-              </span>
-            </a>
-            <ul role="menu" class="dropdown-menu">
-              <li>
-                <a href="#">Action</a>
-              </li>
-              <li>
-                <a href="#">Another action</a>
-              </li>
-              <li>
-                <a href="#">Something else here</a>
-              </li>
-              <li class="divider">
-              </li>
-              <li>
-                <a href="#">Separated link</a>
-              </li>
-              <li class="divider">
-              </li>
-              <li>
-                <a href="#">One more separated link</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <form role="search" class="navbar-form navbar-right">
-          <div class="input-group">
-            <input type="text" placeholder="Search" class="form-control">
-            <div class="input-group-btn">
-              <button type="submit" class="btn btn-default">Submit</button>
+    <nav id="nav" class="navbar navbar-default">
+      <div>
+        <!-- Brand and toggle get grouped for better mobile display-->
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target="#top-navbar-collapse" class="navbar-toggle collapsed">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar">
+          </span>
+          <span class="icon-bar">
+          </span>
+          <span class="icon-bar">
+          </span>
+          </button>
+          <a href="/" class="navbar-brand"><span class="glyphicon glyphicon-home"></span></a>
+        </div>
+        <div id="top-navbar-collapse" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="#">
+                Giới thiệu <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="dropdown">
+              <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">
+                Hoạt động <span class="caret">
+                </span>
+              </a>
+              <ul role="menu" class="dropdown-menu">
+                <li>
+                  <a href="#">Action</a>
+                </li>
+                <li>
+                  <a href="#">Another action</a>
+                </li>
+                <li>
+                  <a href="#">Something else here</a>
+                </li>
+                <li class="divider">
+                </li>
+                <li>
+                  <a href="#">Separated link</a>
+                </li>
+                <li class="divider">
+                </li>
+                <li>
+                  <a href="#">One more separated link</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">
+                Sự kiện <span class="caret">
+                </span>
+              </a>
+              <ul role="menu" class="dropdown-menu">
+                <li>
+                  <a href="#">Action</a>
+                </li>
+                <li>
+                  <a href="#">Another action</a>
+                </li>
+                <li>
+                  <a href="#">Something else here</a>
+                </li>
+                <li class="divider">
+                </li>
+                <li>
+                  <a href="#">Separated link</a>
+                </li>
+                <li class="divider">
+                </li>
+                <li>
+                  <a href="#">One more separated link</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Liên hệ</a>
+            </li>
+          </ul>
+          <form role="search" class="navbar-form navbar-right">
+            <div class="input-group">
+              <input type="text" placeholder="Search" class="form-control">
+              <div class="input-group-btn">
+                <button type="submit" class="btn btn-default">Submit</button>
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </nav>
   </div>
@@ -166,5 +195,6 @@
   <!-- Scripts -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <script src="scripts/script.js" type="text/javascript"></script>
 </body>
 </html>
