@@ -12,13 +12,13 @@
         <span class="icon-bar">
         </span>
         </button>
-        <a href="/" class="navbar-brand"><span class="glyphicon glyphicon-home"></span></a>
+        <a href="/" class="navbar-brand">BKWeb22</a>
       </div>
       <div id="top-navbar-collapse" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
           <li class="active">
             <a href="#">
-              Trang chủ <span class="sr-only">(current)</span>
+              <span class="glyphicon glyphicon-home visible-sm-inline"></span><span class="hidden-sm">Trang chủ</span><span class="sr-only">(current)</span>
             </a>
           </li>
           <li>
