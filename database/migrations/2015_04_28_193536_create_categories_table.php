@@ -21,7 +21,7 @@ class CreateCategoriesTable extends Migration {
 			$table->timestamps();
 		});
 
-		Schema::table('posts', function(Blueprint $table)
+		Schema::table('categories', function(Blueprint $table)
 		{
 			$table->foreign('parent')->references('id')->on('categories');
 		});
