@@ -17,6 +17,7 @@ class CreatePostsTable extends Migration {
 			$table->increments('id');
 			$table->string('title');
 			$table->string('content');
+			$table->string('featured_img');
 			$table->integer('author')->unsigned();
 			$table->integer('category')->unsigned();
 			$table->string('slug')->unique();
