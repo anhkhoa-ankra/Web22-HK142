@@ -5,17 +5,7 @@
   <div class="row">
     <div class="col-sm-6">
       <img src="./images/news_3.jpg">
-      <h4><a href="/post">Google under siege: Europe wants blood</a></h4>
-      <span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span>
-      <span class="sr-only">Time:</span> APRIL 15, 2015
-      <a href="#">
-      <span class="glyphicon glyphicon-thumbs-up like-1" aria-hidden="true"></span></a>
-      <span class="badge">20</span>
-      <a href="#">
-      <span class="glyphicon glyphicon-comment comment" aria-hidden="true"></span></a>
-      <span class="badge">20</span>
-      <p class="content-news">Google faces a fine of up to $6 billion -- more than a quarter's worth of profits for the search company. It also could have to change the way it displays search results in the EU (the changes wouldn't affect results in other countries, including the United States).</p>
-      <a href="#" class="read-more"><h4><span class="label label-warning">Read More</span></h4></a>
+@include('layouts.homePostWidget.full')
     </div>
     <div class="col-sm-6">
       <ul class="list-group">
