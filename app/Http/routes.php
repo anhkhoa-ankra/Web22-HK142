@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'HomeController@index');
+Route::get('home', 'HomeController@index');
 Route::get('category', 'CategoryController@index');
 Route::get('post', 'PostController@index');
 Route::get('admin', 'AdminController@index');
