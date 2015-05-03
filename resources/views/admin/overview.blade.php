@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dashboard Template for Bootstrap</title>
+  <title>BK Web 22 - Dashboard</title>
   <link href="/stylesheets/app.css" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheets/dashboard.css">
   <link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
@@ -20,14 +20,19 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Project name</a>
+        <a class="navbar-brand" href="/">BKWeb22</a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Dashboard</a></li>
-          <li><a href="#">Settings</a></li>
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Help</a></li>
+          {{-- <li><a href="#">Dashboard</a></li> --}}
+          {{-- <li><a href="#">Settings</a></li> --}}
+          {{-- <li><a href="#">Profile</a></li> --}}
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/auth/logout">Logout</a></li>
+            </ul>
+          </li>
         </ul>
         <form class="navbar-form navbar-right">
           <input type="text" class="form-control" placeholder="Search...">
@@ -40,22 +45,32 @@
     <div class="row">
       <div class="col-sm-3 col-md-2 sidebar">
         <ul class="nav nav-sidebar">
-          <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-          <li><a href="#">Reports</a></li>
-          <li><a href="#">Analytics</a></li>
-          <li><a href="#">Export</a></li>
+          <li class="active"><a href="#"><span class="glyphicon glyphicon-dashboard"></span> Dashboard <span class="sr-only">(current)</span></a></li>
+          <ul>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Export</a></li>
+          </ul>
         </ul>
         <ul class="nav nav-sidebar">
-          <li><a href="">Nav item</a></li>
-          <li><a href="">Nav item again</a></li>
-          <li><a href="">One more nav</a></li>
-          <li><a href="">Another nav item</a></li>
-          <li><a href="">More navigation</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false"><span class="glyphicon glyphicon-pencil"></span> Posts <span class="caret"></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="">All Posts</a></li>
+              <li><a href="">Add New</a></li>
+              <li><a href="">Categories</a></li>
+              <li><a href="">Tags</a></li>
+            </ul>
+          </li>
+          <li><a href=""><span class="glyphicon glyphicon-file"></span> Pages</a></li>
+          <li><a href=""><span class="glyphicon glyphicon-comment"></span> Comments</a></li>
+          <li><a href=""><span class="glyphicon glyphicon-camera"></span> Medias</a></li>
         </ul>
         <ul class="nav nav-sidebar">
-          <li><a href="">Nav item again</a></li>
-          <li><a href="">One more nav</a></li>
-          <li><a href="">Another nav item</a></li>
+          <li><a href=""><span class="glyphicon glyphicon-eye-open"></span> Appearance</a></li>
+          <li><a href=""><span class="glyphicon glyphicon-user"></span> Users</a></li>
+          <li><a href=""><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
         </ul>
       </div>
       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">

@@ -65,7 +65,13 @@ body {
   color: #fff;
   background-color: #428bca;
 }
-
+.nav-sidebar a .caret {
+  float: right;
+  margin-top: 6px;
+}
+.nav-sidebar span.glyphicon {
+  margin-right: 6px;
+}
 
 /*
  * Main content
