@@ -14,10 +14,11 @@
 Route::get('/', 'HomeController@index');
 Route::get('admin', 'AdminController@index');
 Route::get('home', 'HomeController@index');
-Route::get('{category}', 'CategoryController@index');
-Route::get('{category}/{post}', 'PostController@index');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
   'password' => 'Auth\PasswordController',
 ]);
+
+Route::get('{category}', 'CategoryController@index');
+Route::get('{category}/{post}', 'PostController@index');
