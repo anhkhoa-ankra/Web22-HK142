@@ -5,5 +5,12 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model {
 
 	//
+  public function category() {
+    return $this->belongsTo('App\Category');
+  }
+
+  public function url() {
+    return "/" . $this->category->slug . "/" . $this->slug;
+  }
 
 }

@@ -23,8 +23,9 @@ class CategoryController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index($category)
 	{
+		// TODO: query category, not fount, throw 404
 		return view('category');
 	}
 

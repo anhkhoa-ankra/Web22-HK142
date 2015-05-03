@@ -5,6 +5,8 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
+use App\Post;
+
 class PostController extends Controller {
 
 	/**
@@ -23,9 +25,13 @@ class PostController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index($category, $post)
 	{
-		return view('post');
+		$post = Post::where('slug', '=', $post)->take(1)->get();
+		if (count($post) == 0 || $post[0]->category->slug != $category) {
+			abort(404);
+		}
+		return view('post', ['post' => $post[0]]);
 	}
 
 	/**

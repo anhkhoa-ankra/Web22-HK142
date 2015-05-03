@@ -1,16 +1,16 @@
 @extends('layouts.master')
-@section('title', 'Sample Post')
+@section('title', $post->title)
 @section('content')
 <article>
 	<!-- Feature -->
 	<div>
 		<a href="#" title="The feature !!!" class="img-wrapper">
-			<img width="750px" height="350px" src="./images/photodune-370797-fashion-s-750x350.jpg" alt="Sorry, image is not found !"
+			<img width="750px" height="350px" src="{{$post->featured_img}}" alt="Sorry, image is not found !"
 			class="img-responsive" title="The feature !!!">
 		</a>
 	</div>
 	<!-- Title -->
-	<h1 class="post-title"><span>Here is a wonderful title post </span></h1>
+	<h1 class="post-title"><span>{{$post->title}}</span></h1>
 	<!-- Date Author Comment Post -->
 	<div class="title-line">
 		<div class="col-sm-2 line-orrange"></div>
@@ -34,14 +34,7 @@
 	</div>
 	<!-- Content -->
 	<div class="post-content">
-		<p>Lorem ipsum quam a platea interdum justo, nostra ligula pretium ultricies euismod aptent, hendrerit velit curae quis risus sagittis a eros tincidunt morbi purus lobortis praesent nibh, consectetur sit pellentesque curabitur senectus litora.</p>
-		<p>Duis ut mollis senectus mollis cursus feugiat duis tortor euismod aenean quisque, lacinia eu orci sodales quisque scelerisque condimentum nibh varius.</p>
-		<p>Accumsan ultrices conubia praesent fringilla nam sed mollis nec potenti volutpat, aliquam pellentesque nec cras auctor sapien aliquam proin scelerisque sem, potenti ipsum fringilla a tempus tempor lacinia et class posuere sem dictum nulla aliquet vivamus rutrum nulla.</p>
-		<p>Sed commodo pellentesque sodales molestie sed sem, gravida turpis justo ut eleifend, velit interdum donec imperdiet gravida nibh euismod dolor vivamus taciti tempus nam nec felis venenatis tempor egestas tellus.</p>
-		<p>Fusce imperdiet eros pulvinar turpis phasellus ac convallis cras, egestas inceptos elementum duis mauris sed nisl, suspendisse aliquam adipiscing sem tristique neque cursus.</p>
-		<p>Justo elementum purus placerat vel donec accumsan diam aliquam inceptos, vel vulputate aenean torquent pharetra non interdum mauris, phasellus aliquet posuere vehicula bibendum purus ultrices nisl.</p>
-		<p>Mauris phasellus ipsum non posuere potenti hendrerit sit fermentum dictum, scelerisque molestie donec torquent erat sem molestie eget praesent ultricies proin eu dictumst quisque, in tristique placerat velit a massa, nisi semper id duis potenti semper faucibus sed volutpat inceptos adipiscing leo.</p>
-		<p>Amet interdum leo laoreet gravida pellentesque habitasse, gravida tempor justo bibendum ac sociosqu, cursus ullamcorper luctus tortor massa cubilia netus semper viverra nisi torquent duis posuere.</p>
+		{!!$post->content!!}
 		
 		<section class="the-best-review">
 			<div class="clearfix">
@@ -116,7 +109,7 @@
 	<div class="col-sm-2">
 		<a href="#" title="Browse Author Articles" >
 			<span class="post-author-avatar" itemprop="image">
-			<img src="./images/author.jpg" width="80" height="80" alt="John Doe">
+			<img src="/images/author.jpg" width="80" height="80" alt="John Doe">
 			</span>
 		</a>
 	</div>

@@ -16,19 +16,20 @@ class CreatePostsTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('title');
-			$table->string('content');
+			$table->string('short_intro');
+			$table->longText('content');
 			$table->string('featured_img');
-			$table->integer('author')->unsigned();
-			$table->integer('category')->unsigned();
 			$table->string('slug')->unique();
-			$table->timestamp('posted_on');
+			$table->integer('user_id')->unsigned();
+			$table->integer('category_id')->unsigned();
+			$table->timestamp('posted_on')->default(DB::raw('CURRENT_TIMESTAMP'));
 			$table->timestamps();
 		});
 
 		Schema::table('posts', function(Blueprint $table)
 		{
-			$table->foreign('author')->references('id')->on('users');
-			$table->foreign('category')->references('id')->on('categories');
+			$table->foreign('user_id')->references('id')->on('users');
+			$table->foreign('category_id')->references('id')->on('categories');
 		});
 	}
 
