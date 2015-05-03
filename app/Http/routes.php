@@ -14,8 +14,9 @@
 Route::get('/', 'HomeController@index');
 Route::get('category', 'CategoryController@index');
 Route::get('post', 'PostController@index');
+Route::get('admin', 'AdminController@index');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
+  'password' => 'Auth\PasswordController',
 ]);
