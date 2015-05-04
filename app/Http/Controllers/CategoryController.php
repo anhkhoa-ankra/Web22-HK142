@@ -23,10 +23,9 @@ class CategoryController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index($category)
+	public function index()
 	{
-		// TODO: query category, not fount, throw 404
-		return view('category');
+		//
 	}
 
 	/**
@@ -55,9 +54,10 @@ class CategoryController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($category)
 	{
-		//
+		// TODO: query category, not fount, throw 404
+		return view('category');
 	}
 
 	/**

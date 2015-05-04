@@ -25,13 +25,9 @@ class PostController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index($category, $post)
+	public function index()
 	{
-		$post = Post::where('slug', '=', $post)->take(1)->get();
-		if (count($post) == 0 || $post[0]->category->slug != $category) {
-			abort(404);
-		}
-		return view('post', ['post' => $post[0]]);
+		//
 	}
 
 	/**
@@ -60,9 +56,13 @@ class PostController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($category, $post)
 	{
-		//
+		$post = Post::where('slug', '=', $post)->take(1)->get();
+		if (count($post) == 0 || $post[0]->category->slug != $category) {
+			abort(404);
+		}
+		return view('post', ['post' => $post[0]]);
 	}
 
 	/**

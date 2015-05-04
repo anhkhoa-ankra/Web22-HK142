@@ -12,13 +12,17 @@
 */
 
 Route::get('/', 'HomeController@index');
-Route::get('admin', 'AdminController@index');
 Route::get('home', 'HomeController@index');
+
+Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function()
+{
+    Route::get('/', 'AdminController@index');
+});
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
   'password' => 'Auth\PasswordController',
 ]);
 
-Route::get('{category}', 'CategoryController@index');
-Route::get('{category}/{post}', 'PostController@index');
+Route::get('{category}', 'CategoryController@show');
+Route::get('{category}/{post}', 'PostController@show');
