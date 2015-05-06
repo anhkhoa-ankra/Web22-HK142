@@ -17,11 +17,18 @@ Route::get('home', 'HomeController@index');
 Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function()
 {
     Route::get('/', 'AdminController@index');
-    Route::get('post/create', 'PostController@create');
+
+    Route::resource('post', 'PostController', ['except' => ['show']]);
+    // Route::get('post', 'PostController@index');
+    // Route::get('post/create', 'PostController@create');
+    // Route::post('post', 'PostController@store');
+    // Route::post('post/{id}/edit', 'PostController@edit');
+    // Route::put('post/{id}', 'PostController@update');
+    // Route::delete('post/{id}', 'PostController@destroy');
 });
 
 Route::controllers([
-	'auth' => 'Auth\AuthController',
+  'auth' => 'Auth\AuthController',
   'password' => 'Auth\PasswordController',
 ]);
 

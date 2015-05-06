@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 
 use App\Post;
 
+use Auth;
+
 class PostController extends Controller {
 
 	/**
@@ -46,9 +48,24 @@ class PostController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
 		//
+		$post = new Post;
+		$post->title = $request->input("post-title");
+		$post->slug = $post->getSlugFromTitle();
+		$post->featured_img = $request->input("post-img");
+		$post->category_id = $request->input("post-category");
+		$post->content = $request->input("post-content");
+		$post->user_id = Auth::user()->id;
+
+		$post->save();
+
+		if ($request->ajax()) {
+			return response()->json(['code' => 0, 'message' => 'success']);
+		} else {
+			return redirect('admin/post/' . $post->id . "/edit");
+		}
 	}
 
 	/**
@@ -75,6 +92,11 @@ class PostController extends Controller {
 	public function edit($id)
 	{
 		//
+		$post = Post::find($id);
+		if (!isset($post)) {
+			abort(404);
+		}
+		return view('admin.editPost', ['post' => $post]);
 	}
 
 	/**
@@ -83,9 +105,24 @@ class PostController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update(Request $request, $id)
 	{
 		//
+		$post = Post::find($id);
+		$post->title = $request->input("post-title");
+		$post->slug = $post->getSlugFromTitle();
+		$post->featured_img = $request->input("post-img");
+		$post->category_id = $request->input("post-category");
+		$post->content = $request->input("post-content");
+		$post->user_id = Auth::user()->id;
+
+		$post->save();
+
+		if ($request->ajax()) {
+			return response()->json(['code' => 0, 'message' => 'success']);
+		} else {
+			return redirect('admin/post/' . $id . "/edit");
+		}
 	}
 
 	/**
