@@ -10,7 +10,6 @@
   <link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -24,9 +23,9 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          {{-- <li><a href="#">Dashboard</a></li> --}}
-          {{-- <li><a href="#">Settings</a></li> --}}
-          {{-- <li><a href="#">Profile</a></li> --}}
+{{-- <li><a href="#">Dashboard</a></li> --}}
+{{-- <li><a href="#">Settings</a></li> --}}
+{{-- <li><a href="#">Profile</a></li> --}}
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
@@ -40,25 +39,34 @@
       </div>
     </div>
   </nav>
-
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-3 col-md-2 sidebar">
+<?php
+if (!isset($current)) {
+  $current = "";
+}
+if (!isset($sub_current)) {
+  $sub_current = "";
+}
+?>
         <ul class="nav nav-sidebar">
-          <li class="active"><a href="#"><span class="glyphicon glyphicon-dashboard"></span> Dashboard <span class="sr-only">(current)</span></a></li>
-          <ul>
-            <li><a href="#">Overview</a></li>
-            <li><a href="#">Reports</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">Export</a></li>
-          </ul>
+          <li {!! ($current == 'dashboard') ? 'class="active"' : 'class="dropdown"' !!}>
+            <a {!! ($current == 'dashboard') ? 'href="#"' : 'class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false"' !!}><span class="glyphicon glyphicon-dashboard"></span> Dashboard{!! ($current == 'dashboard') ? ' <span class="sr-only">(current)</span>' : ' <span class="caret">' !!}</a>
+            <ul{!! ($current == 'dashboard') ? '' : ' class="dropdown-menu" role="menu"' !!}>
+              <li{!! ($sub_current == 'dashboard-overview') ? ' class="active"' : '' !!}><a href="/admin">Overview</a></li>
+              <li><a href="#">Reports</a></li>
+              <li><a href="#">Analytics</a></li>
+              <li><a href="#">Export</a></li>
+            </ul>
+          </li>
         </ul>
         <ul class="nav nav-sidebar">
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false"><span class="glyphicon glyphicon-pencil"></span> Posts <span class="caret"></a>
-            <ul class="dropdown-menu" role="menu">
+          <li {!! ($current == 'posts') ? 'class="active"' : 'class="dropdown"' !!}>
+            <a {!! ($current == 'posts') ? 'href="#"' : 'class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false"' !!}><span class="glyphicon glyphicon-pencil"></span> Posts{!! ($current == 'posts') ? ' <span class="sr-only">(current)</span>' : ' <span class="caret">' !!}</a>
+            <ul{!! ($current == 'posts') ? '' : ' class="dropdown-menu" role="menu"' !!}>
               <li><a href="">All Posts</a></li>
-              <li><a href="/admin/post/create">Add New</a></li>
+              <li{!! ($sub_current == 'posts-new') ? ' class="active"' : '' !!}><a href="/admin/post/create">Add New</a></li>
               <li><a href="">Categories</a></li>
               <li><a href="">Tags</a></li>
             </ul>

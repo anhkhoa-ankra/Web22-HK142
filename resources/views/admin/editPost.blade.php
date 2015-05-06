@@ -1,3 +1,5 @@
+<?php $current = 'posts'; $sub_current = (isset($post)) ? '' : 'posts-new' ?>
+
 @extends('admin.master')
 
 @if (isset($post))
@@ -7,7 +9,7 @@
 @endif
 
 @section('content')
-<form method="POST" action="<?= isset($post)? "/admin/post/" . $post->id : "/admin/post" ?>">
+<form method="POST" action="{{ isset($post)? "/admin/post/" . $post->id : "/admin/post" }}">
   @if(isset($post))
   <input type="hidden" name="_method" value="PUT">
   @endif
@@ -24,13 +26,13 @@
     <div class="form-group col-md-6">
       <label for="post-category">Category</label>
       <select id="post-category" name="post-category" class="form-control">
-        <?php
-        use App\Category;
-        $categories = Category::all();
-        ?>
-        @foreach ($categories as $category)
+<?php
+use App\Category;
+$categories = Category::all();
+?>
+@foreach ($categories as $category)
         <option value="{{$category->id}}">{{$category->name}}</option>
-        @endforeach
+@endforeach
       </select>
     </div>    
   </div>
@@ -38,6 +40,6 @@
   <div class="form-group">
     @include('layouts.ckEditorWidget', ['id' => 'post-content', 'content' => (isset($post)) ? $post->content : ""])
   </div>
-  <button type="submit" class="btn btn-primary"><?= isset($post)? "Save" : "Publish" ?></button>
+  <button type="submit" class="btn btn-primary">{{ isset($post)? "Save" : "Publish" }}</button>
 </form>
 @endsection

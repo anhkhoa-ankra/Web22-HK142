@@ -76,7 +76,7 @@ body {
   list-style-type: none;
 }
 .nav-sidebar ul li.active {
-  font-weight: bolder;
+  font-weight: 700;
 }
 
 /*

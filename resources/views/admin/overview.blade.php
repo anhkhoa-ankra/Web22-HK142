@@ -1,3 +1,5 @@
+<?php $current = 'dashboard'; $sub_current = 'dashboard-overview' ?>
+
 @extends('admin.master')
 
 @section('title', 'Dashboard')
