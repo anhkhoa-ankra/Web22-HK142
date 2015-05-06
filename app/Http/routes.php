@@ -17,6 +17,7 @@ Route::get('home', 'HomeController@index');
 Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function()
 {
     Route::get('/', 'AdminController@index');
+    Route::get('post/create', 'PostController@create');
 });
 
 Route::controllers([

@@ -70,7 +70,13 @@ body {
   margin-top: 6px;
 }
 .nav-sidebar span.glyphicon {
-  margin-right: 6px;
+  margin-right: 4px;
+}
+.nav-sidebar ul {
+  list-style-type: none;
+}
+.nav-sidebar ul li.active {
+  font-weight: bolder;
 }
 
 /*
@@ -109,3 +115,4 @@ body {
   display: inline-block;
   border-radius: 50%;
 }
+
