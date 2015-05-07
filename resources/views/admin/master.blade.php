@@ -7,7 +7,7 @@
   <title>BK Web 22 - @yield('title')</title>
   <link href="/stylesheets/app.css" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheets/dashboard.css">
-  <link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Roboto:700,400,300' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -53,7 +53,7 @@ if (!isset($sub_current)) {
         <ul class="nav nav-sidebar">
           <li {!! ($current == 'dashboard') ? 'class="active"' : 'class="dropdown"' !!}>
             <a {!! ($current == 'dashboard') ? 'href="#"' : 'class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false"' !!}><span class="glyphicon glyphicon-dashboard"></span> Dashboard{!! ($current == 'dashboard') ? ' <span class="sr-only">(current)</span>' : ' <span class="caret">' !!}</a>
-            <ul{!! ($current == 'dashboard') ? '' : ' class="dropdown-menu" role="menu"' !!}>
+            <ul {!! ($current == 'dashboard') ? 'class="nav-submenu"' : ' class="dropdown-menu" role="menu"' !!}>
               <li{!! ($sub_current == 'dashboard-overview') ? ' class="active"' : '' !!}><a href="/admin">Overview</a></li>
               <li><a href="#">Reports</a></li>
               <li><a href="#">Analytics</a></li>
@@ -64,7 +64,7 @@ if (!isset($sub_current)) {
         <ul class="nav nav-sidebar">
           <li {!! ($current == 'posts') ? 'class="active"' : 'class="dropdown"' !!}>
             <a {!! ($current == 'posts') ? 'href="#"' : 'class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false"' !!}><span class="glyphicon glyphicon-pencil"></span> Posts{!! ($current == 'posts') ? ' <span class="sr-only">(current)</span>' : ' <span class="caret">' !!}</a>
-            <ul{!! ($current == 'posts') ? '' : ' class="dropdown-menu" role="menu"' !!}>
+            <ul {!! ($current == 'posts') ? 'class="nav-submenu"' : 'class="dropdown-menu" role="menu"' !!}>
               <li><a href="">All Posts</a></li>
               <li{!! ($sub_current == 'posts-new') ? ' class="active"' : '' !!}><a href="/admin/post/create">Add New</a></li>
               <li><a href="">Categories</a></li>
