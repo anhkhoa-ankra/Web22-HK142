@@ -8,6 +8,7 @@
   <link href="/stylesheets/app.css" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheets/dashboard.css">
   <link href='//fonts.googleapis.com/css?family=Roboto:700,400,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.css">
 </head>
 <body>
   <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -65,7 +66,7 @@ if (!isset($sub_current)) {
           <li {!! ($current == 'posts') ? 'class="active"' : 'class="dropdown"' !!}>
             <a {!! ($current == 'posts') ? 'href="#"' : 'class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false"' !!}><span class="glyphicon glyphicon-pencil"></span> Posts{!! ($current == 'posts') ? ' <span class="sr-only">(current)</span>' : ' <span class="caret">' !!}</a>
             <ul {!! ($current == 'posts') ? 'class="nav-submenu"' : 'class="dropdown-menu" role="menu"' !!}>
-              <li><a href="">All Posts</a></li>
+              <li{!! ($sub_current == 'posts-all') ? ' class="active"' : '' !!}><a href="/admin/post">All Posts</a></li>
               <li{!! ($sub_current == 'posts-new') ? ' class="active"' : '' !!}><a href="/admin/post/create">Add New</a></li>
               <li><a href="">Categories</a></li>
               <li><a href="">Tags</a></li>
@@ -91,5 +92,12 @@ if (!isset($sub_current)) {
   <!-- Scripts -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <script src="//cdn.ckeditor.com/4.4.7/full/ckeditor.js"></script>
+  <script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.js"></script>
+  <script src="//cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+  <script>
+  @section('script')
+  @show
+  </script>
 </body>
 </html>

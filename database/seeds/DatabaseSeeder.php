@@ -115,7 +115,7 @@ class PostTableSeeder extends Seeder {
 			'user_id' => 1,
 			'category_id' => 1,
 			'slug' => 'da-nang-tiep-tuc-dan-dau-ve-nang-luc-canh-tranh-cap-tinh',
-			'posted_on' => '2015-05-03 16:45:06',
+			'posted_at' => '2015-05-03 16:45:06',
 		]);
 	}
 }
