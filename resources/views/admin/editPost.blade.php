@@ -21,7 +21,7 @@
   <div class="row">
     <div class="form-group col-md-6">
       <label for="post-img">Featured Image</label>
-      <input type="text" id="post-img" class="form-control" @if (isset($post)) value="{{$post->featured_img}}" @endif>
+      <input type="text" id="post-img" name="post-img" class="form-control" @if (isset($post)) value="{{$post->featured_img}}" @endif>
     </div>
     <div class="form-group col-md-6">
       <label for="post-category">Category</label>
