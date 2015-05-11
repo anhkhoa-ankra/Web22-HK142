@@ -93,6 +93,10 @@ body {
 .nav-sidebar .nav-submenu > .active > a:focus {
   color: #337ab7;
 }
+.nav-sidebar .active > a {
+  pointer-events: none;
+  cursor: default;
+}
 
 /*
  * Main content
