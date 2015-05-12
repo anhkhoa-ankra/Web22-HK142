@@ -7,7 +7,7 @@
   <title>BK Web 22 - @yield('title')</title>
   <link href="/stylesheets/app.css" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheets/dashboard.css">
-  <link href='//fonts.googleapis.com/css?family=Roboto:700,400,300' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.css">
 </head>
 <body>

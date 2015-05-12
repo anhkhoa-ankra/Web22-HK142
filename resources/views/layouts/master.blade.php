@@ -7,7 +7,7 @@
   <title>BK Web 22 - @yield('title')</title>
   <link href="/stylesheets/app.css" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheets/style.css">
-  <link href='//fonts.googleapis.com/css?family=Roboto:700,400,300' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
 </head>
 <body>
 @include('layouts.header')
