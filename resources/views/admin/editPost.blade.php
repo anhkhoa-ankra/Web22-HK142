@@ -10,9 +10,9 @@
 
 @section('content')
 <form method="POST" action="{{ isset($post)? "/admin/post/" . $post->id : "/admin/post" }}">
-  @if(isset($post))
+@if(isset($post))
   <input type="hidden" name="_method" value="PUT">
-  @endif
+@endif
   <input type="hidden" name="_token" value="{{ csrf_token() }}">
   <div class="form-group">
     <label for="post-title">Title</label>

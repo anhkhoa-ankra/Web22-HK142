@@ -85,8 +85,7 @@ if (!isset($sub_current)) {
       </div>
       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
         <h1 class="page-header">@yield('title')</h1>
-
-        @yield('content')
+@yield('content')
       </div>
     </div>
   </div>
@@ -97,8 +96,7 @@ if (!isset($sub_current)) {
   <script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.js"></script>
   <script src="//cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.js"></script>
   <script>
-  @section('script')
-  @show
+@yield('script')
   </script>
 </body>
 </html>
