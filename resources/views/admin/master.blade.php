@@ -69,7 +69,7 @@ if (!isset($sub_current)) {
             <ul id="posts-menu" class="nav-submenu{{($current == 'posts') ? '' : ' collapse'}}">
               <li{!! ($sub_current == 'posts-all') ? ' class="active"' : '' !!}><a href="/admin/post">All Posts</a></li>
               <li{!! ($sub_current == 'posts-new') ? ' class="active"' : '' !!}><a href="/admin/post/create">Add New</a></li>
-              <li><a href="">Categories</a></li>
+              <li{!! ($sub_current == 'posts-categories') ? ' class="active"' : '' !!}><a href="/admin/category">Categories</a></li>
               <li><a href="">Tags</a></li>
             </ul>
           </li>
@@ -84,7 +84,13 @@ if (!isset($sub_current)) {
         </ul>
       </div>
       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-        <h1 class="page-header">@yield('title')</h1>
+        <h1 class="page-header">
+          @yield('title')
+
+          <div class="pull-right">
+@yield('control')
+          </div>
+        </h1>
 @yield('content')
       </div>
     </div>

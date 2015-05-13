@@ -8,7 +8,7 @@ $('#table_id').DataTable({
         "title": "Title",
         "data": "title",
         "render": function (data, type, row) {
-          return '<a href="' + row.url + '">' + data + '</a>';
+          return '<a href="' + row.url + '" target="_blank">' + data + '</a>';
         }
       }, {
         "title": "Author",
@@ -23,7 +23,7 @@ $('#table_id').DataTable({
         "title": "Actions",
         "orderable": false,
         "searchable": false,
-        "class": "text-right",
+        "class": "text-right no-highlight",
         "render": function (data, type, row) {
           return '<a href="' + row.url + '" target="_blank" title="View"><span class="glyphicon glyphicon-eye-open"></span></a>&nbsp;&nbsp;\
           <a href="/admin/post/' + row.id + '/edit" title="Edit"><span class="glyphicon glyphicon-edit"></span></a>&nbsp;&nbsp;\

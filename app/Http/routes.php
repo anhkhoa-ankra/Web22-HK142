@@ -19,6 +19,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function()
     Route::get('/', 'AdminController@index');
 
     Route::resource('post', 'PostController', ['except' => ['show']]);
+    Route::resource('category', 'CategoryController', ['except' => ['show', 'create']]);
     // Route::get('post', 'PostController@index');
     // Route::get('post/create', 'PostController@create');
     // Route::post('post', 'PostController@store');
