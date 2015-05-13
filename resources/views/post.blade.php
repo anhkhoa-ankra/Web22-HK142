@@ -144,14 +144,14 @@
 <div><h4><span>Leave A Reply</span></h4></div>
 <form>
 	<p>Your email address will not be published.</p>
-	<p><input name="author" id="author" type="text" value="" size="45" aria-required="true" placeholder="Your Name"></p>
-	<p><input name="email" id="email" type="text" value="" size="45" aria-required="true" placeholder="Your Email"></p>
-	<p><input name="url" id="url" type="text" value="" size="45" placeholder="Your Website"></p>
+	<p><input class="form-control" name="author" id="author" type="text" value="" size="45" aria-required="true" placeholder="Your Name"></p>
+	<p><input class="form-control" name="email" id="email" type="text" value="" size="45" aria-required="true" placeholder="Your Email"></p>
+	<p><input class="form-control" name="url" id="url" type="text" value="" size="45" placeholder="Your Website"></p>
 	<p>
-	<textarea name="comment" id="comment" cols="45" rows="10" aria-required="true" placeholder="Your Comment" style="margin-left: 0px; margin-right: 0px; width: 745px;"></textarea>
+	<textarea class="form-control" name="comment" id="comment" rows="10" aria-required="true" placeholder="Your Comment" style="margin-left: 0px; margin-right: 0px; width: 745px;"></textarea>
 	</p>
-	<p class="form-submit">
-	<input name="submit" type="submit" id="comment-submit" class="post-comment" value="Post Comment">
+	<p class="form-submit text-right">
+	<input name="submit" type="submit" id="comment-submit" class="btn btn-primary" value="Post Comment">
 	</p>
 </form>
 </div>
