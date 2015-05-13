@@ -83,7 +83,7 @@
 	</div>
 	<div>
 		<p>
-		Categories: <a href="#" class="link-red">Fasion</a><span> , </span><a href="#" class="link-red">Reviews</a>
+		Categories: <a href="{{$post->category->url()}}" class="link-red">{{$post->category->name}}</a><span>
 		</p>
 	</div>
 	<div>
