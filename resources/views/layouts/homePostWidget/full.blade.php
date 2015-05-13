@@ -1,6 +1,10 @@
+<?php
+  $datetime = explode(" ",$post->updated_at);
+  $date = $datetime[0];
+?>
 <h4><a href="{{$post->url()}}">{{$post->title}}</a></h4>
 <span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span>
-<span class="sr-only">Time:</span> {{$post->updated_at}}
+<span class="sr-only">Time:</span> {{$date}}
 <a href="#">
 <span class="glyphicon glyphicon-thumbs-up like" aria-hidden="true"></span></a>
 <span class="badge">20</span>
