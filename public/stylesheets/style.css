@@ -14,8 +14,6 @@ footer#footer-lower {
   padding-bottom: 10px;
 }
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
-
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -26,10 +24,6 @@ footer#footer-lower {
 html {
   position: relative;
   min-height: 100%;
-}
-
-body {
-  font: 14px "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 aside#sidebar-main {
