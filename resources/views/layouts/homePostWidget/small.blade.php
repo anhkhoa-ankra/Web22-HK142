@@ -3,7 +3,11 @@
   $date = $datetime[0];
 ?>
 <div class="row">
-  <div class="col-sm-5 small-featured"><img src="{{$post->featured_img or "/images/no_img.gif"}}"></div>
+  <div class="col-sm-5">
+    <span class="thumbnail">
+      <img src="{{$post->featured_img}}">
+    </span>
+  </div>
   <div class="col-sm-7">
     <a class="content-news-2" href="{{$post->url()}}">{{$post->title or "Undefined"}}</a>
     <p class="content-news-3">

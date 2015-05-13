@@ -11,7 +11,9 @@ $posts = $cat->posts->sortByDesc(function($post) {
 <div class="article-title">
   <div class="row">
     <div class="col-sm-6">
-      <img src="{{$posts[0]->featured_img}}">
+      <span class="thumbnail">
+        <img src="{{$posts[0]->featured_img}}">
+      </span>
 @include('layouts.homePostWidget.full', ['post' => $posts[0]])
     </div>
     <div class="col-sm-6">

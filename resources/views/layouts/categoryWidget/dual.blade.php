@@ -10,7 +10,9 @@ $posts = $cat->posts->sortByDesc(function($post) {
     <div class="page-header">
       <h1><a href="{{$cat->url()}}">{{$cat->name}}</a></h1>
     </div>
-    <img src="{{$posts[0]->featured_img}}">
+    <span class="thumbnail">
+      <img src="{{$posts[0]->featured_img}}">
+    </span>
 @include('layouts.homePostWidget.full', ['post' => $posts[0]])
 @for ($i = 1; $i < count($posts); $i++)
     <div class="page-header title-news-1">
@@ -29,7 +31,9 @@ $posts = $cat->posts->sortByDesc(function($post) {
     <div class="page-header">
       <h1><a href="{{$cat->url()}}">{{$cat->name}}</a></h1>
     </div>
-    <img src="{{$posts[0]->featured_img}}">
+    <span class="thumbnail">
+      <img src="{{$posts[0]->featured_img}}">
+    </span>
 @include('layouts.homePostWidget.full', ['post' => $posts[0]])
 @for ($i = 1; $i < count($posts); $i++)
     <div class="page-header title-news-1">

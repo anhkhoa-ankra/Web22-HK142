@@ -60,6 +60,7 @@ if (!isset($sub_current)) {
               <li><a href="#">Reports</a></li>
               <li><a href="#">Analytics</a></li>
               <li><a href="#">Export</a></li>
+              <li><a href="/admin/phpinfo">phpinfo()</a></li>
             </ul>
           </li>
         </ul>

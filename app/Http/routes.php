@@ -18,6 +18,10 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function()
 {
     Route::get('/', 'AdminController@index');
 
+    Route::get('phpinfo', function () {
+        return phpinfo();
+    });
+
     Route::resource('post', 'PostController', ['except' => ['show']]);
     Route::resource('category', 'CategoryController', ['except' => ['show', 'create']]);
     // Route::get('post', 'PostController@index');

@@ -14,15 +14,6 @@ footer#footer-lower {
   padding-bottom: 10px;
 }
 
-.small-featured {
-  height: 85px;
-  width: 140px;
-}
-
-.small-featured img {
-  max-width: 100%;
-  max-height: 100%;
-}
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 
 * {
