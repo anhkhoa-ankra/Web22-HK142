@@ -27,9 +27,24 @@ class PostController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(Request $request)
 	{
 		//
+		if ($request->ajax()) {
+			return response()->json(array("data" => Post::all()->map(function ($post) {
+				return array(
+					"id" => $post->id,
+					"title" => $post->title,
+					"url" => $post->url(),
+					"author" => $post->author->name,
+					"category" => $post->category->name,
+					"date" => $post->posted_at,
+				);
+			})));
+			// return Post::paginate();
+		} else {
+			return view('admin.posts');
+		}
 	}
 
 	/**

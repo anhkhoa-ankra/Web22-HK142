@@ -22,7 +22,7 @@ class CreatePostsTable extends Migration {
 			$table->string('slug')->unique();
 			$table->integer('user_id')->unsigned();
 			$table->integer('category_id')->unsigned();
-			$table->timestamp('posted_on')->default(DB::raw('CURRENT_TIMESTAMP'));
+			$table->timestamp('posted_at')->default(DB::raw('CURRENT_TIMESTAMP'));
 			$table->timestamps();
 		});
 
