@@ -29,16 +29,21 @@
     </div>
     <div class="form-group col-md-6">
       <label for="post-category">Category</label>
-      <select id="post-category" name="post-category" class="form-control">
+      <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-success" type="button" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button>
+        </span>
+        <select id="post-category" name="post-category" class="form-control">
 <?php
 use App\Category;
 $categories = Category::all();
 ?>
 @foreach ($categories as $category)
-        <option value="{{$category->id}}"@if (isset($post) && $post->category->id == $category->id) {{'selected'}}@endif>{{$category->name}}</option>
+          <option value="{{$category->id}}"@if (isset($post) && $post->category->id == $category->id) {{'selected'}}@endif>{{$category->name}}</option>
 @endforeach
-      </select>
-    </div>    
+        </select>
+      </div>
+    </div>
   </div>
   <div class="form-group">
     <label for="post-intro">Short Intro</label>
@@ -50,4 +55,5 @@ $categories = Category::all();
   </div>
   <button type="submit" class="btn btn-primary">{{ isset($post)? "Save" : "Publish" }}</button>
 </form>
+@include('layouts.editCategoryWidget', ['id' => 'myModal'])
 @endsection
