@@ -227,6 +227,10 @@ div .post-content {
 .the-best-review-list .criterion .title {
   font-size: 16px;
 }
+.content-percentage {
+  padding-left: 150px;
+  padding-right: 20px;
+}
 .rate-review {
   height: 124px;
   text-align: center;

@@ -1,6 +1,10 @@
 @extends('layouts.master')
 @section('title', $post->title)
 @section('content')
+<?php
+  $datetime = explode(" ",$post->updated_at);
+  $date = $datetime[0];
+?>
 <article>
 	<!-- Feature -->
 	<div>
@@ -18,10 +22,10 @@
 	</div>
 	<div class="row date-author-comment">
 		<div class="col-sm-2">
-			<span><time title="Tuesday, August 12, 2014, 5:49 pm">Aug 12, 2014</time></span>
+			<span><time title="Tuesday, August 12, 2014, 5:49 pm">{{$date}}</time></span>
 		</div>
 		<div class="col-sm-8">
-			<span><a href="#"><span> John Doe</span></a></span>
+			<span><a href="#"><span>{{$post->author->name}}</span></a></span>
 			<!-- FOR STAR RATING
 			<div class="rating-stars">
 				<span style="width: 66%;"></span>
@@ -50,7 +54,7 @@
 						<div class="col-sm-2 line-orrange"></div>
 						<div class="col-sm-8 line-gray"></div>
 					</div>
-					<p class="test">Lorem ipsum primis elementum et integer tincidunt purus senectus litora luctus, nisi metus hac egestas senectus erat consequat phasellus egestas aliquam pharetra, neque eleifend magna imperdiet neque suspendisse aenean dictumst sit.</p>
+					<p class="content-percentage">Lorem ipsum primis elementum et integer tincidunt purus senectus litora luctus, nisi metus hac egestas senectus erat consequat phasellus egestas aliquam pharetra, neque eleifend magna imperdiet neque suspendisse aenean dictumst sit.</p>
 				</div>
 			</div>
 			<ul class="the-best-review-list col-sm-12">
@@ -104,7 +108,7 @@
 </section>
 <section class="post-author">
 	<div class="title-author">
-		<h4><span><a href="#">John Doe</a></span></h4>
+		<h4><span><a href="#">{{$post->author->name}}</a></span></h4>
 	</div>
 	<div class="col-sm-2">
 		<a href="#" title="Browse Author Articles" >
