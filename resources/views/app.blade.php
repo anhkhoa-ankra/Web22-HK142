@@ -7,6 +7,7 @@
 	<title>Laravel</title>
 
 	<link href="/stylesheets/app.css" rel="stylesheet">
+	
 
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400italic,700italic,300,700,300italic,400&subset=latin,vietnamese,latin-ext' rel='stylesheet' type='text/css'>

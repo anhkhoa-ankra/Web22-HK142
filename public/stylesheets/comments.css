@@ -1,0 +1,50 @@
+.comments-list {
+
+}
+.comments-item {
+	margin: auto;
+	padding: auto;
+	text-align: left;
+	border-top: double 3px #003399;
+	margin-bottom: 10px;
+	padding-top: 10px;
+
+}
+.user-img {
+	margin: auto;
+	padding: auto;
+	width: 100px;
+	height: 100px;
+}
+.comments-user-name {
+	font-size: 12pt;
+	font-weight: bold;
+}
+.h2-line {
+	font-size: 20px;
+	text-transform: uppercase;
+	background-color: #003399;
+	color: white;
+	font-weight: bold;
+	display: inline-block;
+	padding: 4px 10px 4px 10px;
+}
+.h4-line {
+	font-size: 14px;
+	background-color: #808080;
+	color: white;
+	font-weight: bold;
+	display: inline-block;
+	padding: 3px 10px 3px 10px;
+}
+.h4-line a:link{
+	color: white;
+}
+.line-blue {
+	text-align: left;
+	border-bottom: 2px solid #003399;	
+}
+.line-red {
+	text-align: right;
+	border-bottom: 1px solid #808080;
+}
