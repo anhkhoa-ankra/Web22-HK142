@@ -140,6 +140,10 @@
 	</div>
 </div>
 <section class="clearfix"></section>
+
+@include('layouts.comments')
+
+
 <div class="comments-form">
 <div><h4><span>Leave A Reply</span></h4></div>
 <form>
