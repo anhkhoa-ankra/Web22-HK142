@@ -357,25 +357,10 @@ div .post-content {
 ********************************************************************************
 *******************************************************************************/
 .catelogy-block{
-  margin-bottom: 30px;
-}
-.catelogy-term{
-  position: relative;
+  margin-bottom: 5%;
 }
 .catelogy-term-img {
-  width: 360px;
-  height: 200px;
-  position: absolute;
-  top: 0;
-}
-.catelogy-term-title{
-  z-index: 200;
-  position: absolute;
-  top: 30px;
-}
-.catelogy-post-detail {
-  height: 165px;
-
+  width: 100%;
 }
 .catelogy-post-time-author{
   margin-top: 5px;

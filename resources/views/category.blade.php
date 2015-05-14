@@ -110,7 +110,7 @@ for ($i=0; $i < count($posts); $i++) {
 	</div>
 </div> -->
 <!-- <main id="content" class="container" itemtype="http://schema.org/WebPageElement" itemprop="mainContentOfPage" itemscope="" role="main"> -->
-<div class="row">
+<div class="row" style="text-align: justify;">
 	<div class="col-sm-12 title-line">
 		<h4 class="page-heading">
 			<span class="h-title">
@@ -125,13 +125,10 @@ for ($i=0; $i < count($posts); $i++) {
 		<article class= "catelogy-block" itemtype="http://schema.org/Article" itemscope="itemscope">
 			<div class="row catelogy-term">
 				<div class="col-sm-6">
-					<img class="catelogy-term-img .img-responsive" src="{{$posts[$i]->featured_img}}" alt="BAI_1" class="img-responsive">
-					<span class="catelogy-term-title">
-						<a href="{{$cat->url()}}" class="read-more"><h4><span class="label label-danger">{{$cat->name}}</span></h4></a>
-					</span>
+					<img class="catelogy-term-img .img-responsive" src="{{$posts[$i]->featured_img}}" alt="BAI_1">
 				</div>
-				<div class="col-sm-6">
-					<div class="catelogy-post-detail">
+				<div class="col-sm-6 catelogy-term">
+					<div>
 						<a class="post-url" title="Post 1" href="{{$posts[$i]->url()}}" rel="bookmark" itemprop="url">
 							<span class="post-title" style="font-size: 18px;" itemprop="headline">{{$posts[$i]->title}}</span>
 						</a>
