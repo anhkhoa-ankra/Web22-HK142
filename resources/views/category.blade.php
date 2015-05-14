@@ -125,7 +125,7 @@ for ($i=0; $i < count($posts); $i++) {
 		<article class= "catelogy-block" itemtype="http://schema.org/Article" itemscope="itemscope">
 			<div class="row catelogy-term">
 				<div class="col-sm-6">
-					<img class="catelogy-term-img" src="{{$posts[$i]->featured_img}}" alt="BAI_1" class="img-responsive">
+					<img class="catelogy-term-img .img-responsive" src="{{$posts[$i]->featured_img}}" alt="BAI_1" class="img-responsive">
 					<span class="catelogy-term-title">
 						<a href="{{$cat->url()}}" class="read-more"><h4><span class="label label-danger">{{$cat->name}}</span></h4></a>
 					</span>
