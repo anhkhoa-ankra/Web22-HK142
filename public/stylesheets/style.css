@@ -363,6 +363,8 @@ div .post-content {
   position: relative;
 }
 .catelogy-term-img {
+  width: 360px;
+  height: 200px;
   position: absolute;
   top: 0;
 }

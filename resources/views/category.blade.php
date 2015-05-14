@@ -125,14 +125,14 @@ for ($i=0; $i < count($posts); $i++) {
 		<article class= "catelogy-block" itemtype="http://schema.org/Article" itemscope="itemscope">
 			<div class="row catelogy-term">
 				<div class="col-sm-6">
-					<img class="catelogy-term-img" src="./images/catelogy-1.jpg" alt="BAI_1" class="img-responsive">
+					<img class="catelogy-term-img" src="{{$posts[$i]->featured_img}}" alt="BAI_1" class="img-responsive">
 					<span class="catelogy-term-title">
-						<a href="#" class="read-more"><h4><span class="label label-danger">{{$cat->name}}</span></h4></a>
+						<a href="{{$cat->url()}}" class="read-more"><h4><span class="label label-danger">{{$cat->name}}</span></h4></a>
 					</span>
 				</div>
 				<div class="col-sm-6">
 					<div class="catelogy-post-detail">
-						<a class="post-url" title="Post 1" href="#" rel="bookmark" itemprop="url">
+						<a class="post-url" title="Post 1" href="{{$posts[$i]->url()}}" rel="bookmark" itemprop="url">
 							<span class="post-title" style="font-size: 18px;" itemprop="headline">{{$posts[$i]->title}}</span>
 						</a>
 						<div class="catelogy-post-time-author row">
@@ -155,7 +155,7 @@ for ($i=0; $i < count($posts); $i++) {
 							{{$posts[$i]->short_intro}}
 						</div>
 					</div>
-					<a href="#" class="read-more"><h4><span class="label label-danger">READ MORE</span></h4></a>
+					<a href="{{$posts[$i]->url()}}" class="read-more"><h4><span class="label label-danger">READ MORE</span></h4></a>
 				</div>
 			</div>
 		</article>
