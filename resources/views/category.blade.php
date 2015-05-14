@@ -110,7 +110,7 @@ for ($i=0; $i < count($posts); $i++) {
 	</div>
 </div> -->
 <!-- <main id="content" class="container" itemtype="http://schema.org/WebPageElement" itemprop="mainContentOfPage" itemscope="" role="main"> -->
-<div class="row" style="text-align: justify;">
+<div class="row">
 	<div class="col-sm-12 title-line">
 		<h4 class="page-heading">
 			<span class="h-title">
@@ -133,19 +133,26 @@ for ($i=0; $i < count($posts); $i++) {
 							<span class="post-title" style="font-size: 18px;" itemprop="headline">{{$posts[$i]->title}}</span>
 						</a>
 						<div class="catelogy-post-time-author row">
-							<div class="col-sm-4">
-								<span><time title="{{$posts[0]->updated_at}}">{{$date[$i]}}</time></span>
+							<div class="col-sm-5">
+								<span class="glyphicon glyphicon glyphicon-time" aria-hidden="true" />
+								<span class="sr-only">Time:</span> {{$date[$i]}}
 							</div>
-							<div class="col-sm-6">
-								<span><a href="#"><span>{{$posts[$i]->author->name}}</span></a></span>
+							<div class="col-sm-4">
+								<a href="#">
+									<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+									<span class="sr-only">Author:</span> {{$posts[$i]->author->name}}
+								</a>
 								<!-- FOR STAR RATING
 								<div class="rating-stars">
 									<span style="width: 66%;"></span>
 								</div>
 								-->
 							</div>
-							<div class="col-sm-2 title-comment">
-								<a href="#" title="Click here to view commentsâ€">3</a>
+							<div class="col-sm-3 title-comment">
+								<a href="#" title="Click here to view commentsâ€">
+									<span class="glyphicon glyphicon-comment comment" aria-hidden="true" />
+									3
+								</a>
 							</div>
 						</div>
 						<div class="post-summary" itemprop="description">

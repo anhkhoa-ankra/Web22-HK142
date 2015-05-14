@@ -211,8 +211,12 @@ div .post-content {
   font-size: 16px;
 }
 .content-percentage {
+  text-align: justify;
   padding-left: 150px;
   padding-right: 20px;
+}
+.text-justify{
+  text-align: justify;
 }
 .rate-review {
   height: 124px;
@@ -273,7 +277,6 @@ div .post-content {
 }
 .social-share ul li {
   text-align: center;
-  height: 33px;
   margin-left: 7px;
 }
 .social-share div ul li, .social-share div, .social-share span.share {
@@ -281,31 +284,31 @@ div .post-content {
 }
 .social-share div ul li.facebook {
   background-color: #4a639f;
-  width: 90px;
+  width: 15%;
 }
 .social-share div ul li.twitter {
   background-color: #59c8ff;
-  width: 85px;
+  width: 14%;
 }
 .social-share div ul li.google {
   background-color: #e44e4f;
-  width: 90px;
+  width: 13%;
 }
 .social-share div ul li.printerest {
   background-color: #e44e4f;
-  width: 95px;
+  width: 15%;
 }
 .social-share div ul li.linkedin {
   background-color: #0266a0;
-  width: 90px;
+  width: 13%;
 }
 .social-share div ul li.tumblr {
   background-color: #3e5a70;
-  width: 80px;
+  width: 12%;
 }
 .social-share div ul li.email {
   background-color: #0c151c;
-  width: 70px;
+  width: 10%;
 }
 
 .next-prev {
@@ -358,6 +361,9 @@ div .post-content {
 *******************************************************************************/
 .catelogy-block{
   margin-bottom: 5%;
+}
+.catelogy-term {
+  text-align: justify;
 }
 .catelogy-term-img {
   width: 100%;
