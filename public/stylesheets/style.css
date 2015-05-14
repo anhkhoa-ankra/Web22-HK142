@@ -350,3 +350,32 @@ div .post-content {
   background-color: #e44e4f;
   float : right;
 }
+
+/*******************************************************************************
+********************************************************************************
+****************************** CSS FOR CATELOGY ********************************
+********************************************************************************
+*******************************************************************************/
+.catelogy-block{
+  margin-bottom: 30px;
+}
+.catelogy-term{
+  position: relative;
+}
+.catelogy-term-img {
+  position: absolute;
+  top: 0;
+}
+.catelogy-term-title{
+  z-index: 200;
+  position: absolute;
+  top: 30px;
+}
+.catelogy-post-detail {
+  height: 165px;
+
+}
+.catelogy-post-time-author{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
