@@ -8,8 +8,8 @@
 <article>
 	<!-- Feature -->
 	<div>
-		<a href="#" title="The feature !!!" class="img-wrapper">
-			<img width="750px" height="350px" src="{{$post->featured_img}}" alt="Sorry, image is not found !"
+		<a href="{{$post.url()}}" title="The feature !!!" class="img-wrapper">
+			<img src="{{$post->featured_img}}" alt="Sorry, image is not found !"
 			class="img-responsive" title="The feature !!!">
 		</a>
 	</div>
