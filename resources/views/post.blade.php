@@ -21,10 +21,12 @@
 		<div class="col-sm-10 line-gray"></div>
 	</div>
 	<div class="row date-author-comment">
-		<div class="col-sm-2">
-			<span><time title="Tuesday, August 12, 2014, 5:49 pm">{{$date}}</time></span>
+		<div class="col-sm-3">
+			<span class="glyphicon glyphicon glyphicon-time" aria-hidden="true" />
+			<span><time title="{{$post->updated_at}}">{{$date}}</time></span>
 		</div>
-		<div class="col-sm-8">
+		<div class="col-sm-7">
+			<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
 			<span><a href="#"><span>{{$post->author->name}}</span></a></span>
 			<!-- FOR STAR RATING
 			<div class="rating-stars">
@@ -33,7 +35,8 @@
 			-->
 		</div>
 		<div class="col-sm-2 title-comment">
-			<a href="#" title="Click here to view commentsâ€">3</a>
+			<span class="glyphicon glyphicon-comment comment" aria-hidden="true" />
+			<a href="#" title="Click here to view comments">3</a>
 		</div>
 	</div>
 	<!-- Content -->
@@ -60,22 +63,22 @@
 			<ul class="the-best-review-list col-sm-12">
 				<li class="clearfix">
 					<div class="criterion">
-						<span class="title">Viverra varius</span>
+						<span class="title">Nhu Van Tran</span>
 					</div>
 				</li>
 				<li class="clearfix boder-gray">
 					<div class="criterion">
-						<span class="title">Viverra varius</span>
+						<span class="title">Anh Khoa Ankra</span>
 					</div>
 				</li>
 				<li class="clearfix boder-gray">
 					<div class="criterion">
-						<span class="title">Viverra varius</span>
+						<span class="title">Ngo Khac Vu</span>
 					</div>
 				</li>
 				<li class="clearfix boder-gray">
 					<div class="criterion">
-						<span class="title">Viverra varius</span>
+						<span class="title">Nguyen Tan Phuc ZK</span>
 					</div>
 				</li>
 			</ul>
@@ -92,10 +95,10 @@
 		</p>
 	</div>
 </article>
-<section class="social-share clearfix">
-	<span class="share">SHARE</span>
-	<div>
-		<ul>
+<section class="social-share clearfix row">
+	<div class="col-sm-1">SHARE</div>
+	<div class="col-sm-11">
+		<ul style="font-size: 12px; font-weight:600;">
 			<li class="facebook"><a href="#"><span>Facebook</span></a></li>
 			<li class="twitter"><a href="#"><span>Twitter</span></a></li>
 			<li class="google"><a href="#" ><span>Google+</span></a></li>
@@ -117,7 +120,7 @@
 			</span>
 		</a>
 	</div>
-	<div class="col-sm-10" >
+	<div class="col-sm-10 text-justify" >
 		<p>Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori. Grape wattle seed kombu beetroot horseradish carrot squash brussels sprout chard.</p>
 	</div>
 </section>
