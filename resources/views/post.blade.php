@@ -8,8 +8,8 @@
 <article>
 	<!-- Feature -->
 	<div>
-		<a href="#" title="The feature !!!" class="img-wrapper">
-			<img width="750px" height="350px" src="{{$post->featured_img}}" alt="Sorry, image is not found !"
+		<a href="{{$post.url()}}" title="The feature !!!" class="img-wrapper">
+			<img src="{{$post->featured_img}}" alt="Sorry, image is not found !"
 			class="img-responsive" title="The feature !!!">
 		</a>
 	</div>
@@ -22,7 +22,7 @@
 	</div>
 	<div class="row date-author-comment">
 		<div class="col-sm-3">
-			<span class="glyphicon glyphicon glyphicon-time" aria-hidden="true" />
+			<span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span>
 			<span><time title="{{$post->updated_at}}">{{$date}}</time></span>
 		</div>
 		<div class="col-sm-7">
