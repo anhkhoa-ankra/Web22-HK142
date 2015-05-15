@@ -22,7 +22,7 @@
 	</div>
 	<div class="row date-author-comment">
 		<div class="col-sm-3">
-			<span class="glyphicon glyphicon glyphicon-time" aria-hidden="true" />
+			<span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span>
 			<span><time title="{{$post->updated_at}}">{{$date}}</time></span>
 		</div>
 		<div class="col-sm-7">

@@ -6,7 +6,7 @@
 
 @section('content')
 @include('layouts.categoryWidget.type1', ['category' => 1])
-@include('layouts.categoryWidget.type2', ['category' => 1])
+@include('layouts.categoryWidget.type2', ['category' => 2])
 <div class="page-header">
 	<h1><a href="/category">Stay With Us</a></h1>
 </div>
@@ -38,5 +38,5 @@
 		</div>
 	</div>
 </div>
-@include('layouts.categoryWidget.dual', ['cat1' => 1, 'cat2' => 1])
+@include('layouts.categoryWidget.dual', ['cat1' => 3, 'cat2' => 4])
 @endsection
