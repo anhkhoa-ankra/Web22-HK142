@@ -1,7 +1,7 @@
 <header class="jumbotron">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12">
+      <div class="col-sm-8">
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
           <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
@@ -41,6 +41,27 @@
           </div>
         </div>
       </div>
+
+      <div class="col-sm-4">
+        <div class="row col-sm-12 space-bottom">
+          <div class="pic zoom_img">
+            <img src="http://demo.betterstudio.com/better-mag-dark/wp-content/uploads/sites/7/2014/08/picjumbo.com_IMG_7706.jpg">
+            <div class="carousel-caption caption-news">
+                <a href="#">Taste That Strawberry!</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row col-sm-12">
+          <div class="pic zoom_img">
+            <img src="http://img.v3.news.zdn.vn/w660/Uploaded/ngtmns/2015_05_13/hangsondoong.jpg">
+            <div class="carousel-caption caption-news">
+              <a href="#">Hang son doong discovery!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </header>
