@@ -75,8 +75,9 @@ class CommentController extends Controller {
 				$comment->parent_id = $request->input('cmt-parent');
 			}
 
-			$comment->post_id = $request->input('cmt-post');
+			$comment->post_id = $request->input('post');
 			$comment->name = $request->input('cmt-name');
+			$comment->email = $request->input('cmt-email');
 			$comment->website = $request->input('cmt-website');
 			$comment->content = $request->input('cmt-content');
 			$comment->approved = false;
