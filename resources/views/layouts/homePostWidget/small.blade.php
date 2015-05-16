@@ -4,9 +4,11 @@
 ?>
 <div class="row">
   <div class="col-sm-5">
-    <div class="column thumbnail">
-      <figure style="background-image: url(<?php echo $post->featured_img; ?>);" class="fixedratio"></figure>
-    </div>
+    <a href="$post->url()">
+      <div class="column thumbnail">
+        <figure style="background-image: url(<?php echo $post->featured_img; ?>);" class="fixedratio"></figure>
+      </div>
+    </a>
   </div>
   <div class="col-sm-7">
     <a class="content-news-2" href="{{$post->url()}}">{{$post->title or "Undefined"}}</a>

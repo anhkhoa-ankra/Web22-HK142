@@ -7,11 +7,11 @@
 ?>
 <article>
 	<!-- Feature -->
-	<div>
-		<a href="{{$post.url()}}" title="The feature !!!" class="img-wrapper">
-			<img src="{{$post->featured_img}}" alt="Sorry, image is not found !"
+	<div class="row">
+		<div class="col-sm-12 img-wrapper thumbnail">
+			<img style="width:100%; height:100%;"src="{{$post->featured_img}}" alt="Sorry, image is not found !"
 			class="img-responsive" title="The feature !!!">
-		</a>
+		</div>
 	</div>
 	<!-- Title -->
 	<h1 class="post-title"><span>{{$post->title}}</span></h1>

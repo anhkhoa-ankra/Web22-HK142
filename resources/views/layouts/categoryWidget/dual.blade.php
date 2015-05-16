@@ -10,9 +10,11 @@ $posts = $cat->posts->sortByDesc(function($post) {
     <div>
       <h1><a href="{{$cat->url()}}">{{$cat->name}}</a></h1>
     </div>
-    <div class="column thumbnail">
-      <figure style="background-image: url(<?php echo $posts[0]->featured_img; ?>);" class="fixedratio"></figure>
-    </div>
+    <a href="{{$posts[0]->url()}}">
+      <div class="column thumbnail">
+        <figure style="background-image: url(<?php echo $posts[0]->featured_img; ?>);" class="fixedratio"></figure>
+      </div>
+    </a>
 @include('layouts.homePostWidget.full', ['post' => $posts[0]])
 @for ($i = 1; $i < count($posts); $i++)
     <div class="title-news-1">
@@ -31,9 +33,11 @@ $posts = $cat->posts->sortByDesc(function($post) {
     <div>
       <h1><a href="{{$cat->url()}}">{{$cat->name}}</a></h1>
     </div>
-    <div class="column thumbnail">
-      <figure style="background-image: url(<?php echo $posts[0]->featured_img; ?>);" class="fixedratio"></figure>
-    </div>
+    <a href="{{$posts[0]->url()}}">
+      <div class="column thumbnail">
+        <figure style="background-image: url(<?php echo $posts[0]->featured_img; ?>);" class="fixedratio"></figure>
+      </div>
+    </a>
     <div style="max-height:250px;">
 @include('layouts.homePostWidget.full', ['post' => $posts[0]])
     </div>

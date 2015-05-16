@@ -11,9 +11,11 @@ $posts = $cat->posts->sortByDesc(function($post) {
 <div class="article-title">
   <div class="row content-news">
     <div class="col-sm-7">
-      <div class="column thumbnail">
-        <figure style="background-image: url(<?php echo $posts[0]->featured_img; ?>);" class="fixedratio"></figure>
-      </div>
+      <a href="{{$posts[0]->url()}}">
+        <div class="column thumbnail">
+          <figure style="background-image: url(<?php echo $posts[0]->featured_img; ?>);" class="fixedratio"></figure>
+        </div>
+      </a>
     </div>
     <div class="col-sm-5">
 @include('layouts.homePostWidget.full', ['post' => $posts[0]])

@@ -168,7 +168,6 @@ div .post-content {
 .img-wrapper {
     display: inline-block;
     overflow: hidden;
-    border: 1px solid gray;
 }
 
 .img-wrapper img {
@@ -397,6 +396,23 @@ figure.fixedratio {
   background-size: cover;
   -moz-background-size: cover;  /* Firefox 3.6 */
   background-position: center;  /* Internet Explorer 7/8 */
+  transition: all 1s;
+}
+
+figure.fixedratio:hover {
+  max-width: 100%;
+  -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+}
+figure.fixedratio:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: url("http://placekitten.com/200/300");
+    background-size: cover;
 }
 figure.author-fixedratio {
   padding-top: 100%;  /* 450px/800px = 0.5625 */
