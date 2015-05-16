@@ -52,25 +52,25 @@ class CategoryTableSeeder extends Seeder {
 		
 		Category::create([
 			'name' => 'Công nghệ',
-			'slug' => 'Công nghệ',
+			'slug' => 'cong-nghe',
 			'id'=>'2',
 		]);
 		
 		Category::create([
 			'name' => 'Xã hội',
-			'slug' => 'Xã hội',
+			'slug' => 'xa-hoi',
 			'id'=>'3',
 		]);
 		
 		Category::create([
 			'name' => 'Giải trí',
-			'slug' => 'Giải trí',
+			'slug' => 'giai-tri',
 			'id'=>'4',
 		]);
 		
 		Category::create([
 			'name' => 'Khoa học và Số hóa',
-			'slug' => 'Khoa học và Số hóa',
+			'slug' => 'khoa-hoc-va-so-hoa',
 			'id'=>'5',
 		]);
 	}
