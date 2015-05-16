@@ -42,22 +42,25 @@
 	<!-- Content -->
 	<div class="post-content">
 		{!!$post->content!!}
-		
 		<section class="the-best-review">
 			<div class="clearfix">
 				<div class="col-sm-2 rate-review">
 					<span class="rate">66<span class="percentage">%</span></span>
 					<span class="verdict-title">Awesome</span>
 				</div>
-				<div ckass="content-tbr col-sm-10">
-					<h4 class="uppercase">
-					<span class="title-tbr">The Best Review</span>
+				<div class="col-sm-10">
+					<h4>
+						<span class="title-tbr">The Best Review</span>
 					</h4>
 					<div class="rate-line">
 						<div class="col-sm-2 line-orrange"></div>
-						<div class="col-sm-8 line-gray"></div>
+						<div class="col-sm-10 line-gray"></div>
 					</div>
-					<p class="content-percentage">Lorem ipsum primis elementum et integer tincidunt purus senectus litora luctus, nisi metus hac egestas senectus erat consequat phasellus egestas aliquam pharetra, neque eleifend magna imperdiet neque suspendisse aenean dictumst sit.</p>
+					<div class="content-percentage">
+						<p >Lorem ipsum primis elementum et integer tincidunt purus senectus litora luctus, 
+							nisi metus hac egestas senectus erat consequat phasellus egestas aliquam pharetra, neque eleifend magna
+							 imperdiet neque suspendisse aenean dictumst sit.</p>
+					</div>
 				</div>
 			</div>
 			<ul class="the-best-review-list col-sm-12">
@@ -109,21 +112,32 @@
 		</ul>
 	</div>
 </section>
+<div>
 <section class="post-author">
-	<div class="title-author">
-		<h4><span><a href="#">{{$post->author->name}}</a></span></h4>
+	<div class="row">
+		<div class="col-sm-3">
+			<div class="name-author">
+				<a href=""><span>{{$post->author->name}}</span></a>
+			</div>
+		</div>
+		<div class="col-sm-12 title-line">
+			<div class="line-gray"></div>
+		</div>
 	</div>
-	<div class="col-sm-2">
-		<a href="#" title="Browse Author Articles" >
-			<div class="column">
-        		<figure style="background-image: url(/images/author.jpg);" class="author-fixedratio"></figure>
-      		</div>
-		</a>
-	</div>
-	<div class="col-sm-10 text-justify" >
-		<p>Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori. Grape wattle seed kombu beetroot horseradish carrot squash brussels sprout chard.</p>
+	<div class="clearfix" style="padding-bottom:20px;">
+		<div class="col-sm-2">
+			<a href="#" title="Browse Author Articles" >
+				<div class="column">
+	        		<figure style="background-image: url(/images/author.jpg);" class="author-fixedratio"></figure>
+	      		</div>
+			</a>
+		</div>
+		<div class="col-sm-10 text-justify" >
+			<p class="content-percentage">Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori. Grape wattle seed kombu beetroot horseradish carrot squash brussels sprout chard.</p>
+		</div>
 	</div>
 </section>
+</div>
 <div class="next-prev">
 	<div class="col-sm-6 next-prev">
 		<div class="previous">

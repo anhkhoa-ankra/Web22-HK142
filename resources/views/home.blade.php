@@ -7,8 +7,15 @@
 @section('content')
 @include('layouts.categoryWidget.type1', ['category' => 1])
 @include('layouts.categoryWidget.type2', ['category' => 2])
-<div class="page-header">
-	<h1><a href="/category">Stay With Us</a></h1>
+<div class="row">
+    <div class="col-sm-3">
+       <div class="name-catelogy-blue">
+          <a href=""><span>Stay With Us</span></a>
+       </div>
+    </div>
+    <div class="col-sm-12 title-line">
+        <div class="line-blue"></div>
+    </div>
 </div>
 <div class="article-title">
 	<div class="row">

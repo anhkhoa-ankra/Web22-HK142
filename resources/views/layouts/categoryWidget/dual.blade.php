@@ -7,8 +7,15 @@ $posts = $cat->posts->sortByDesc(function($post) {
 })->take(5);
 ?>
   <div class="col-sm-6">
-    <div>
-      <h1><a href="{{$cat->url()}}">{{$cat->name}}</a></h1>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="name-catelogy-blue">
+          <a href="{{$cat->url()}}"><span>{{$cat->name}}</span></a>
+        </div>
+      </div>
+      <div class="col-sm-12 title-line">
+        <div class="line-blue"></div>
+      </div>
     </div>
     <a href="{{$posts[0]->url()}}">
       <div class="column thumbnail">
@@ -30,9 +37,16 @@ $posts = $cat->posts->sortByDesc(function($post) {
 })->take(5);
 ?>
   <div class="col-sm-6">
-    <div>
-      <h1><a href="{{$cat->url()}}">{{$cat->name}}</a></h1>
+    <div class="row">
+    <div class="col-sm-6">
+      <div class="name-catelogy-red">
+        <a href="{{$cat->url()}}"><span>{{$cat->name}}</span></a>
+      </div>
     </div>
+    <div class="col-sm-12 title-line">
+      <div class="line-red"></div>
+    </div>
+  </div>
     <a href="{{$posts[0]->url()}}">
       <div class="column thumbnail">
         <figure style="background-image: url(<?php echo $posts[0]->featured_img; ?>);" class="fixedratio"></figure>

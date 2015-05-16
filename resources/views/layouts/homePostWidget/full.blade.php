@@ -9,9 +9,9 @@
 	<span class="glyphicon glyphicon-thumbs-up like" aria-hidden="true"></span>
 	<span class="badge">20</span>
 </a>
-<a style="text-decoration: none;" href="#">
+<a style="text-decoration: none; " href="#">
 	<span class="glyphicon glyphicon-comment comment" aria-hidden="true"></span>
 	<span class="badge">20</span>
 </a>
 <p class="content-news">{{$post->short_intro}}</p>
-<a href="{{$post->url()}}" class="read-more"><h4><span class="label label-danger">Read More</span></h4></a>
+<h4><a href="{{$post->url()}}" class="read-more"><span class="label label-danger">Read More</span></a></h4>

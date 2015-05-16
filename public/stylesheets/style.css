@@ -130,11 +130,10 @@ footer#footer-lower {
   font-size: 9pt;
   padding-top: 18px;
 }
-
 .follower-me img {
+  max-width: 50%;
   display: block;
-  padding-left: auto;
-  padding-right: auto;
+  margin:auto;
 }
 .title-img{
   width: 500px;
@@ -200,6 +199,12 @@ div .post-content {
 .line-gray {
   border-top: 2px solid #555555;
 }
+.line-red {
+  border-top: 2px solid #d9534f;
+}
+.line-blue {
+  border-top: 2px solid #446280;
+}
 .title-comment{
   text-align: right;
 }
@@ -225,7 +230,6 @@ div .post-content {
 }
 .content-percentage {
   text-align: justify;
-  padding-left: 150px;
   padding-right: 20px;
 }
 .text-justify{
@@ -250,26 +254,19 @@ div .post-content {
 }
 
 .post-author {
-  height: 166px;
   background-color: #EEEEEE;
   margin-bottom: 20px;
 }
-.title-author {
-  height: 35px;
-  border-bottom: 2px solid #446280;
-  margin-bottom: 20px;
-}
-.title-author h4 {
-  width: 130px;
-  height: 35px;
-  line-height: 35px;
+.name-author {
+  font-weight: bold;
   text-align: center;
-  background-color: #446280;
+  font-size: 20px;
+  line-height: 35px;
+  background-color:#555555;
 }
-.title-author h4 span a {
+.name-author a {
   color: white;
 }
-
 .rate-line {
   margin-bottom: 20px;
 }
@@ -399,10 +396,9 @@ figure.fixedratio {
   transition: all 1s;
 }
 
-figure.fixedratio:hover {
-  max-width: 100%;
-  -webkit-transform: scale(1.1, 1.1);
-    transform: scale(1.1, 1.1);
+figure.fixedratio:hover {\
+  -webkit-transform: scale(1.05, 1.05);
+    transform: scale(1.05, 1.05);
 }
 figure.fixedratio:after {
     content: '';
@@ -411,7 +407,6 @@ figure.fixedratio:after {
     top: 0px;
     right: 0px;
     bottom: 0px;
-    background: url("http://placekitten.com/200/300");
     background-size: cover;
 }
 figure.author-fixedratio {
@@ -420,3 +415,40 @@ figure.author-fixedratio {
   -moz-background-size: cover;  /* Firefox 3.6 */
   background-position: center;  /* Internet Explorer 7/8 */
 }
+.name-catelogy-red {
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  line-height: 35px;
+  background-color:#d9534f;
+}
+.name-catelogy-blue {
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  line-height: 35px;
+  background-color:#446280;
+}
+.name-catelogy-blue a, .name-catelogy-red a  {
+  color: white;
+}
+/*
+
+.name-catelogy-red:hover {
+  -webkit-transition: background-color 0.3s linear;
+  -moz-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear;
+  -ms-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
+  background-color:#446280;
+}
+.name-catelogy-blue:hover {
+  -webkit-transition: background-color 0.3s linear;
+  -moz-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear;
+  -ms-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
+  background-color:#d9534f;
+}
+
+*/
