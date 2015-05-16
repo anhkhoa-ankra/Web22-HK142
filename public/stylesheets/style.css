@@ -115,6 +115,7 @@ footer#footer-lower {
 
 .content-news {
   margin-bottom: 15px;
+  text-align: justify;
 }
 
 .read-more:link {
@@ -379,17 +380,27 @@ div .post-content {
   text-align: justify;
 }
 .catelogy-term-img {
-  width: 100%;
+  max-width: 100%;
 }
 .catelogy-post-time-author{
   margin-top: 5px;
   margin-bottom: 5px;
 }
-img{max-width: 100%;}
-.image { 
-  background: url(yourpath/image.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+
+div.column {
+  /* The background image must be 800px wide */
+  max-width: 800px;
+}
+
+figure.fixedratio {
+  padding-top: 56.25%;  /* 450px/800px = 0.5625 */
   background-size: cover;
+  -moz-background-size: cover;  /* Firefox 3.6 */
+  background-position: center;  /* Internet Explorer 7/8 */
+}
+figure.author-fixedratio {
+  padding-top: 100%;  /* 450px/800px = 0.5625 */
+  background-size: cover;
+  -moz-background-size: cover;  /* Firefox 3.6 */
+  background-position: center;  /* Internet Explorer 7/8 */
 }

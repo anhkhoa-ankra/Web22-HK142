@@ -115,9 +115,9 @@
 	</div>
 	<div class="col-sm-2">
 		<a href="#" title="Browse Author Articles" >
-			<span class="post-author-avatar" itemprop="image">
-			<img src="/images/author.jpg" width="80" height="80" alt="John Doe">
-			</span>
+			<div class="column">
+        		<figure style="background-image: url(/images/author.jpg);" class="author-fixedratio"></figure>
+      		</div>
 		</a>
 	</div>
 	<div class="col-sm-10 text-justify" >
