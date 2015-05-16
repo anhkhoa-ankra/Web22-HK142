@@ -135,10 +135,14 @@ footer#footer-lower {
   padding-left: auto;
   padding-right: auto;
 }
-
+.title-img{
+  width: 500px;
+  height: 300px;
+}
 .title-news-1 {
   text-align: left;
   font-size: 10pt;
+  margin-bottom: 5px;
 }
 
 .title-news-1 a {
@@ -380,4 +384,12 @@ div .post-content {
 .catelogy-post-time-author{
   margin-top: 5px;
   margin-bottom: 5px;
+}
+img{max-width: 100%;}
+.image { 
+  background: url(yourpath/image.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

@@ -5,7 +5,7 @@
 <div class="row">
   <div class="col-sm-5">
     <span class="thumbnail">
-      <img src="{{$post->featured_img}}">
+      <a href="{{$post->url()}}"><img style="width:100%; height:75px;" src="{{$post->featured_img}}"></a>
     </span>
   </div>
   <div class="col-sm-7">

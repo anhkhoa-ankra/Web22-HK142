@@ -12,4 +12,4 @@
 <span class="glyphicon glyphicon-comment comment" aria-hidden="true"></span></a>
 <span class="badge">20</span>
 <p class="content-news">{{$post->short_intro}}</p>
-<a href="{{$post->url()}}" class="read-more"><h4><span class="label label-warning">Read More</span></h4></a>
+<a href="{{$post->url()}}" class="read-more"><h4><span class="label label-danger">Read More</span></h4></a>

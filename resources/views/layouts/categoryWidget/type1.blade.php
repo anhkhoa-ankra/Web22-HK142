@@ -12,7 +12,7 @@ $posts = $cat->posts->sortByDesc(function($post) {
   <div class="row content-news">
     <div class="col-sm-7">
       <span class="thumbnail">
-        <img src="{{$posts[0]->featured_img}}">
+        <a href="{{$posts[0]->url()}}"><img src="{{$posts[0]->featured_img}}"></a>
       </span>
     </div>
     <div class="col-sm-5">
