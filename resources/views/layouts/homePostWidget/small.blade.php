@@ -12,11 +12,11 @@
   </div>
   <div class="col-sm-7">
     <a href="{{$post->url()}}" style="color:#000;">{{$post->title or "Undefined"}}</a>
-    <p class="date-time">
+    <p class="date-time-small">
       <span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span>
       <span class="sr-only">Time:</span> {{$date}}
       <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-      <span class="sr-only">Author:</span> {{$post->author->name}}
+      <a href="#" style="color:#000;"><span class="sr-only">Author:</span> {{$post->author->name}}</a>
     </p>
   </div>
 </div>

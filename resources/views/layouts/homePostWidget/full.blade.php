@@ -3,17 +3,24 @@
   $date = $datetime[0];
 ?>
 <h4><a href="{{$post->url()}}" style="color:#000;">{{$post->title}}</a></h4>
-<div class="date-time">
-	<span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span>
-	<span class="sr-only">Time:</span> {{$date}}
-	<a style="text-decoration: none;" href="#">
-		<span class="glyphicon glyphicon-thumbs-up like" aria-hidden="true"></span>
-		<span class="badge">20</span>
-	</a>
-	<a style="text-decoration: none; " href="#">
-		<span class="glyphicon glyphicon-comment comment" aria-hidden="true"></span>
-		<span class="badge">20</span>
-	</a>
+<div class="row date-time-full">
+	<div class="col-sm-4">
+		<span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span>
+		<span><time title="{{$post->updated_at}}">{{$date}}</time></span>
+	</div>
+	<div class="col-sm-5">
+		<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+		<a href="#" style="color:#000;"><span>{{$post->author->name}}</span></a>
+		<!-- FOR STAR RATING
+		<div class="rating-stars">
+			<span style="width: 66%;"></span>
+		</div>
+		-->
+	</div>
+	<div class="col-sm-3 title-comment">
+		<span class="glyphicon glyphicon-comment comment" aria-hidden="true" />
+		<a href="#" title="Click here to view comments">3</a>
+	</div>
 </div>
 <p class="content-news">{{$post->short_intro}}</p>
 <h4><a href="{{$post->url()}}" class="read-more"><span class="label label-danger">Read More</span></a></h4>

@@ -23,11 +23,13 @@ $posts = $cat->posts->sortByDesc(function($post) {
       </div>
     </a>
 @include('layouts.homePostWidget.full', ['post' => $posts[0]])
+    <div style="margin-top:50px;">
 @for ($i = 1; $i < count($posts); $i++)
-    <div class="title-news-1">
-      <a href="{{$posts[$i]->url()}}" style="color:#000;"><span class="glyphicon glyphicon-play" style="font-size:10px;"></span> {{$posts[$i]->title}}</a>
-    </div>
+      <div class="title-news-1">
+        <a href="{{$posts[$i]->url()}}" style="color:#000;"><span class="glyphicon glyphicon-play" style="font-size:10px;"></span> {{$posts[$i]->title}}</a>
+      </div>
 @endfor
+    </div>
   </div>
 <?php
 $cat = Category::find($cat2);
@@ -54,10 +56,12 @@ $posts = $cat->posts->sortByDesc(function($post) {
     <div style="max-height:250px;">
 @include('layouts.homePostWidget.full', ['post' => $posts[0]])
     </div>
+    <div style="margin-top:50px;">
 @for ($i = 1; $i < count($posts); $i++)
-    <div class="title-news-1">
-      <a href="{{$posts[$i]->url()}}" style="color:#000;"><span class="glyphicon glyphicon-play" style="font-size:10px;"></span> {{$posts[$i]->title}}</a>
-    </div>
+      <div class="title-news-1">
+        <a href="{{$posts[$i]->url()}}" style="color:#000;"><span class="glyphicon glyphicon-play" style="font-size:10px;"></span> {{$posts[$i]->title}}</a>
+      </div>
 @endfor
+    </div>
   </div>
 </div>

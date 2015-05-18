@@ -196,6 +196,7 @@ div .post-content {
 }
 
 .date-author-comment{
+  opacity: 0.7; font-size:12px;
   margin-bottom: 20px;
 }
 .title-line {
@@ -371,7 +372,12 @@ div .post-content {
   background-color: #e44e4f;
   float : right;
 }
-.date-time {
+.date-time-full {
+  opacity: 0.7; 
+  font-size:12px;
+  padding-bottom:5px;
+}
+.date-time-small {
   opacity: 0.7; 
   font-size:12px; 
   padding-top:5px; 
