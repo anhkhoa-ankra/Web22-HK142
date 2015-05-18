@@ -132,17 +132,18 @@ for ($i=0; $i < count($posts); $i++) {
 				<div class="col-sm-6 catelogy-term">
 					<div>
 						<a class="post-url" title="Post 1" href="{{$posts[$i]->url()}}" rel="bookmark" itemprop="url">
-							<span class="post-title" style="font-size: 18px;" itemprop="headline">{{$posts[$i]->title}}</span>
+							<span class="post-title" style="font-size: 18px; color:#000;" itemprop="headline">{{$posts[$i]->title}}</span>
 						</a>
-						<div class="catelogy-post-time-author row">
-							<div class="col-sm-5">
-								<span class="glyphicon glyphicon glyphicon-time" aria-hidden="true" />
-								<span class="sr-only">Time:</span> {{$date[$i]}}
-							</div>
+						<div class="row date-time-small">
 							<div class="col-sm-4">
-								<a href="#">
-									<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-									<span class="sr-only">Author:</span> {{$posts[$i]->author->name}}
+								<span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span>
+								<span><time title="{{$posts[$i]->updated_at}}">{{$date[$i]}}</time></span>
+							</div>
+							<div class="col-sm-5">
+								<a href="#" style="color:#000;">
+									<span>
+										<span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{$posts[$i]->author->name}}
+									</span>
 								</a>
 								<!-- FOR STAR RATING
 								<div class="rating-stars">
@@ -151,9 +152,8 @@ for ($i=0; $i < count($posts); $i++) {
 								-->
 							</div>
 							<div class="col-sm-3 title-comment">
-								<a href="#" title="Click here to view commentsâ€">
-									<span class="glyphicon glyphicon-comment comment" aria-hidden="true" />
-									3
+								<a href="#" title="Click here to view comments" style="color:#000;">
+									<span class="glyphicon glyphicon-comment comment" aria-hidden="true"></span> 3
 								</a>
 							</div>
 						</div>
