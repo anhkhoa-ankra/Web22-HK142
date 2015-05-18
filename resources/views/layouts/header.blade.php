@@ -1,10 +1,9 @@
 <header class="page-header">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12">
-        <h1>
-        BKWeb22 <small>Subtext for header</small>
-        </h1>
+   		<div class="col-sm-3">
+   			<img class=".img-responsive" style="width:100%;" src="./images/logo.png">
+   		</div>
       </div>
     </div>
   </div>

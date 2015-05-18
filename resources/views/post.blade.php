@@ -89,12 +89,12 @@
 	</div>
 	<div>
 		<p>
-		Categories: <a href="{{$post->category->url()}}" class="link-red">{{$post->category->name}}</a><span>
+			<span class="glyphicon glyphicon-folder-open"></span> Categories: <a href="{{$post->category->url()}}" class="link-red">{{$post->category->name}}</a><span>
 		</p>
 	</div>
 	<div>
 		<p class="terms-list">
-		Tags: <a href="#" class="link-red">Girl</a>
+			<span class="glyphicon glyphicon-tag"></span> Tags: <a href="#" class="link-red">Girl</a>
 		</p>
 	</div>
 </article>
