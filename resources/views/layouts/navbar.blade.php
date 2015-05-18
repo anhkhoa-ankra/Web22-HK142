@@ -1,6 +1,6 @@
 <div class="container">
-  <nav id="nav" class="navbar navbar-default">
-    <div class="nav-background">
+  <nav id="nav" class="navbar navbar-default nav-background">
+    <div>
       <!-- Brand and toggle get grouped for better mobile display-->
       <div class="navbar-header alpha60">
         <button type="button" data-toggle="collapse" data-target="#top-navbar-collapse" class="navbar-toggle collapsed">

@@ -487,17 +487,21 @@ figure.author-fixedratio {
 .nav-background, .nav-home{
   background-color: #1F2736;
 }
-.alpha60:hover{
-    background-color: #446280;
+.navbar {
+  border-radius: 0;
 }
- .navbar-default .navbar-nav > .active > a
- {
-      background: #446280;
- }
- .navbar-default .navbar-nav > .active > a:hover
- {
-      background: #446280;
- }
- .navbar-default .navbar-nav > .active > a:focus {
-      background: #446280;
- }
+.navbar-default {
+  border: none;
+  border-bottom: 2px solid #446280;
+}
+.alpha60:hover,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  background: #446280;
+  margin-bottom: -2px;
+  border-bottom: 2px solid #e15150;
+}
