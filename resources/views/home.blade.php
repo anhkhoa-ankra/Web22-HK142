@@ -17,31 +17,43 @@
         <div class="line-blue"></div>
     </div>
 </div>
-<div class="article-title">
+<div class="article-title" style="margin-bottom : 50px;">
 	<div class="row">
-		<div class="col-sm-2 follower-me">
-			<img src="./images/icon-facebook.png">
-			<span class="badge">35.500 likes</span>
+		<div class="col-sm-2 follower-me">	
+			<a href="">
+				<div class="col-sm-5" style="background-image: url('/images/icon-facebook.png');"></div>
+				<div class="col-sm-7 padding-5" style="opacity: 0.7;"><span style="font-weight:bold;">35.500</span><span> Likes</span></div>
+			</a>
 		</div>
 		<div class="col-sm-2 follower-me">
-			<img src="./images/icon-twitter.png">
-			<span class="badge">120 followers</span>
+			<a href="">
+				<div class="col-sm-5" style="background-image: url('/images/icon-twitter.png');"></div>
+				<div class="col-sm-7 padding-5" style="opacity: 0.7;"><span style="font-weight:bold;">120</span><span> Followers</span></div>	
+			</a>
 		</div>
 		<div class="col-sm-2 follower-me">
-			<img src="./images/icon-youtube.png">
-			<span class="badge">300 subscribers</span>
+			<a href="">
+				<div class="col-sm-5" style="background-image: url('/images/icon-instagram.png');"></div>	
+				<div class="col-sm-7 padding-5" style="opacity: 0.7;"><span style="font-weight:bold;">300</span><span> Subscribers</span></div>
+			</a>
 		</div>
 		<div class="col-sm-2 follower-me">
-			<img src="./images/icon-google-plus.png">
-			<span class="badge">450 followers</span>
+			<a href="">
+				<div class="col-sm-5" style="background-image: url('/images/icon-yahoo.png');"></div>
+				<div class="col-sm-7 padding-5" style="opacity: 0.7;"><span style="font-weight:bold;">450</span><span> Followers</span></div>
+				</a>
 		</div>
 		<div class="col-sm-2 follower-me">
-			<img src="./images/icon-yahoo.png">
-			<span class="badge">190 subscribers</span>
+			<a href="">
+				<div class="col-sm-5" style="background-image: url('/images/icon-youtube.png');"></div>
+				<div class="col-sm-7 padding-5"style="opacity: 0.7;"><span style="font-weight:bold;">190</span><span> Subscribers</span></div>
+			</a>
 		</div>
 		<div class="col-sm-2 follower-me">
-			<img src="./images/icon-instagram.png">
-			<span class="badge">560 followers</span>
+			<a href="">
+				<div class="col-sm-5" style="background-image: url('/images/icon-google-plus.png');"></div>
+				<div class="col-sm-7 padding-5" style="opacity: 0.7;"><span style="font-weight:bold;">560</span><span> Followers</span></div>	
+			</a>
 		</div>
 	</div>
 </div>
