@@ -25,8 +25,7 @@ $posts = $cat->posts->sortByDesc(function($post) {
 @include('layouts.homePostWidget.full', ['post' => $posts[0]])
 @for ($i = 1; $i < count($posts); $i++)
     <div class="title-news-1">
-      <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
-      <a href="{{$posts[$i]->url()}}">{{$posts[$i]->title}}</a>
+      <a href="{{$posts[$i]->url()}}" style="color:#000;"><span class="glyphicon glyphicon-play" style="font-size:10px;"></span> {{$posts[$i]->title}}</a>
     </div>
 @endfor
   </div>
@@ -56,9 +55,8 @@ $posts = $cat->posts->sortByDesc(function($post) {
 @include('layouts.homePostWidget.full', ['post' => $posts[0]])
     </div>
 @for ($i = 1; $i < count($posts); $i++)
-    <div class=" title-news-1">
-      <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
-      <a href="{{$posts[$i]->url()}}">{{$posts[$i]->title}}</a>
+    <div class="title-news-1">
+      <a href="{{$posts[$i]->url()}}" style="color:#000;"><span class="glyphicon glyphicon-play" style="font-size:10px;"></span> {{$posts[$i]->title}}</a>
     </div>
 @endfor
   </div>

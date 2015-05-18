@@ -11,12 +11,12 @@
     </a>
   </div>
   <div class="col-sm-7">
-    <a class="content-news-2" href="{{$post->url()}}">{{$post->title or "Undefined"}}</a>
-    <p class="content-news-3">
-    <span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span>
-    <span class="sr-only">Time:</span> {{$date}}
-    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-    <span class="sr-only">Author:</span> {{$post->author->name}}
+    <a href="{{$post->url()}}" style="color:#000;">{{$post->title or "Undefined"}}</a>
+    <p class="date-time">
+      <span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span>
+      <span class="sr-only">Time:</span> {{$date}}
+      <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+      <span class="sr-only">Author:</span> {{$post->author->name}}
     </p>
   </div>
 </div>
