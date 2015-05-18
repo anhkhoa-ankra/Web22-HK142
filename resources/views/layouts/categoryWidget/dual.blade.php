@@ -54,7 +54,7 @@ $posts = $cat->posts->sortByDesc(function($post) {
       </div>
     </a>
     <div style="max-height:250px;">
-@include('layouts.homePostWidget.full', ['post' => $posts[0]])
+  @include('layouts.homePostWidget.small', ['post' => $posts[0]])
     </div>
     <div style="margin-top:50px;">
 @for ($i = 1; $i < count($posts); $i++)

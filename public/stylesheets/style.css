@@ -414,6 +414,9 @@ figure.fixedratio {
   background-position: center;  /* Internet Explorer 7/8 */
   transition: all 1s;
 }
+figure.fixedratio-footer {
+  padding-top: 85%;
+}
 
 figure.fixedratio:hover {\
   -webkit-transform: scale(1.05, 1.05);
@@ -485,7 +488,7 @@ figure.author-fixedratio {
   color: #ffffff;
 }
 .nav-background, .nav-home{
-  background-color: #1F2736;
+  background-color: #2c3f52;
 }
 .navbar {
   border-radius: 0;
@@ -506,4 +509,62 @@ figure.author-fixedratio {
   background-color: #446280;
   margin-bottom: -2px;
   border-bottom: 2px solid #e15150;
+}
+
+/*******************************************************************************
+********************************************************************************
+****************************** CSS FOR FOOTER***********************************
+********************************************************************************
+*******************************************************************************/
+#footer-large {
+  background-color: #446280;
+  text-align: justify;
+  color: #FFF;
+}
+.footer-large-font {
+  font-size: 15px;
+  font-weight: 500;x
+}
+.title-footer{
+  margin-top: -10px;
+  color: #FFF;
+  font-weight: 600;
+  background-color: #2c3f52;
+}
+.title-footer h4 {
+  text-align: center;
+  line-height: 35px;
+}
+#footer-large img {
+  max-width: 70%;
+  margin-bottom: 12px;
+}
+#footer-lower,#footer-lower a {
+  color: #FFF;
+  font-weight: 600;
+}
+.submit-form-control {
+  width: 75%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.footer-flickr-image{
+  border: solid 1px black;
+}
+.footer-flickr-image img {
+  padding-left: 0px;
+  width: 200%;
+}
+.my-col-sm {
+  padding-left: 10px;
+  padding-right: 10px;
 }
