@@ -490,6 +490,17 @@ figure.author-fixedratio {
 .nav-background, .nav-home{
   background-color: #1F2736;
 }
-.alpha60:hover,{
+.alpha60:hover{
     background-color: #446280;
 }
+ .navbar-default .navbar-nav > .active > a
+ {
+      background: #446280;
+ }
+ .navbar-default .navbar-nav > .active > a:hover
+ {
+      background: #446280;
+ }
+ .navbar-default .navbar-nav > .active > a:focus {
+      background: #446280;
+ }
