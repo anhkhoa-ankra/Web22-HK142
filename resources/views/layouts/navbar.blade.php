@@ -38,8 +38,8 @@
                 <span class="caret"></span>
               </span> 
             </a>
-            <ul role="menu" class="dropdown-menu nav-background alpha60">
-              <li>
+            <ul role="menu" class="dropdown-menu nav-background">
+              <li style="backround-color:#446280;">
                 <a href="#"><span class="nav-font-color"><span class="glyphicon glyphicon-play" style="font-size:10px; margin-right:5px;"></span> Action</span></a>
               </li>
               <li class="divider">
@@ -71,7 +71,7 @@
                 <span class="caret"></span> 
               </span>
             </a>
-            <ul role="menu" class="dropdown-menu nav-background alpha60">
+            <ul role="menu" class="dropdown-menu nav-background">
               <li>
                 <a href="#"><span class="nav-font-color"><span class="glyphicon glyphicon-play" style="font-size:10px; margin-right:5px;"></span> Action</span></a>
               </li>              

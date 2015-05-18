@@ -500,8 +500,10 @@ figure.author-fixedratio {
 .navbar-default .navbar-nav > .active > a:focus,
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
-.navbar-default .navbar-nav > .open > a:focus {
-  background: #446280;
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar-nav .open .dropdown-menu > li > a:focus {
+  background-color: #446280;
   margin-bottom: -2px;
   border-bottom: 2px solid #e15150;
 }
