@@ -10,7 +10,7 @@ $posts = $cat->posts->sortByDesc(function($post) {
     <div class="row">
       <div class="col-sm-6">
         <div class="name-catelogy-blue">
-          <a href="{{$cat->url()}}"><span>{{$cat->name}}</span></a>
+          <a href="{{$cat->url()}}"><span><span class="glyphicon glyphicon-leaf"></span> {{$cat->name}}</span></a>
         </div>
       </div>
       <div class="col-sm-12 title-line">
@@ -40,7 +40,7 @@ $posts = $cat->posts->sortByDesc(function($post) {
     <div class="row">
     <div class="col-sm-6">
       <div class="name-catelogy-red">
-        <a href="{{$cat->url()}}"><span>{{$cat->name}}</span></a>
+        <a href="{{$cat->url()}}"><span><span class="glyphicon glyphicon-qrcode"></span> {{$cat->name}}</span></a>
       </div>
     </div>
     <div class="col-sm-12 title-line">

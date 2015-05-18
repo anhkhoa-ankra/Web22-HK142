@@ -10,7 +10,7 @@
 <div class="row">
     <div class="col-sm-3">
        <div class="name-catelogy-blue">
-          <a href=""><span>Stay With Us</span></a>
+          <a href=""><span><span class="glyphicon glyphicon-thumbs-up"></span> Stay With Us</span></a>
        </div>
     </div>
     <div class="col-sm-12 title-line">

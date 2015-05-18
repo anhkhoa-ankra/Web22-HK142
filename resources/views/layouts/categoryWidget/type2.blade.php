@@ -8,7 +8,7 @@ $posts = $cat->posts->sortByDesc(function($post) {
 <div class="row">
   <div class="col-sm-3">
     <div class="name-catelogy-red">
-      <a href="{{$cat->url()}}"><span>{{$cat->name}}</span></a>
+      <a href="{{$cat->url()}}"><span><span class="glyphicon glyphicon-tint"></span> {{$cat->name}}</span></a>
     </div>
    </div>
    <div class="col-sm-12 title-line">
