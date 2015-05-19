@@ -2,7 +2,7 @@
   <nav id="nav" class="navbar navbar-default nav-background">
     <div>
       <!-- Brand and toggle get grouped for better mobile display-->
-      <div class="navbar-header alpha60">
+      <div class="navbar-header active alpha60">
         <button type="button" data-toggle="collapse" data-target="#top-navbar-collapse" class="navbar-toggle collapsed">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar">
@@ -20,23 +20,17 @@
       </div>
       <div id="top-navbar-collapse" class="collapse navbar-collapse">
         <ul class="nav navbar-nav nav-font-color">
-          <li class="active">
-            <a href="#">
-              <span class="glyphicon glyphicon-home visible-sm-inline"></span><span class="hidden-sm nav-font-color"> TRANG CHỦ</span><span class="sr-only">(current)</span>
-            </a>
-          </li>
           <li class="alpha60">
             <a href="#" class="">
-              <span class="nav-font-color"> <span class="glyphicon glyphicon-leaf"></span> GIỚI THIỆU</span>
+              <span class="nav-font-color"> <span class="glyphicon glyphicon-leaf"></span>&nbsp;&nbsp;GIỚI THIỆU</span>
             </a>
           </li>
           <li class="dropdown alpha60">
             <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">
               <span class="nav-font-color">
-                <span class="glyphicon glyphicon-list"></span>
-                  HOẠT ĐỘNG 
+                <span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;HOẠT ĐỘNG 
                 <span class="caret"></span>
-              </span> 
+              </span>
             </a>
             <ul role="menu" class="dropdown-menu nav-background">
               <li style="backround-color:#446280;">
@@ -67,7 +61,7 @@
           <li class="dropdown alpha60">
             <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle alpha60">
               <span class="nav-font-color">
-                <span class="glyphicon glyphicon-star"></span> SỰ KIỆN 
+                <span class="glyphicon glyphicon-star"></span>&nbsp;&nbsp;SỰ KIỆN 
                 <span class="caret"></span> 
               </span>
             </a>
@@ -98,7 +92,7 @@
             </ul>
           </li>
           <li class="alpha60">
-            <a href="#"><span class="nav-font-color"><span class="glyphicon glyphicon-pencil"></span> LIÊN HỆ</span></a>
+            <a href="#"><span class="nav-font-color"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;LIÊN HỆ</span></a>
           </li>
         </ul>
         <form role="search" class="navbar-form navbar-right search-round">

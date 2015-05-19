@@ -45,8 +45,8 @@ class CategoryTableSeeder extends Seeder {
 		DB::table('categories')->delete();
 
 		Category::create([
-			'name' => 'Uncategorized1',
-			'slug' => 'uncategorized1',
+			'name' => 'Uncategorized',
+			'slug' => 'uncategorized',
 			'id'=>'1',
 		]);
 		
