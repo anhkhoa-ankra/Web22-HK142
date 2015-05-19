@@ -1,7 +1,6 @@
 <?php
-use App\Category;
-$cat = Category::find(1);
-$posts = $cat->posts->sortByDesc(function($post) {
+use App\Post;
+$posts = Post::all()->sortByDesc(function($post) {
     return $post->posted_at;
 })->take(3);
 
