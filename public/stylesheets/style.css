@@ -511,6 +511,9 @@ figure.author-fixedratio {
   margin-bottom: -2px;
   border-bottom: 2px solid #e15150;
 }
+.navbar > .container .navbar-brand {
+  margin-left: 0;
+}
 
 /*******************************************************************************
 ********************************************************************************
