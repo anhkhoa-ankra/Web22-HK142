@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="/stylesheets/style.css">
   <link rel="stylesheet" href="/stylesheets/comments.css">
   <link href='//fonts.googleapis.com/css?family=Roboto:400italic,700italic,300,700,300italic,400&subset=latin,vietnamese,latin-ext' rel='stylesheet' type='text/css'>
+  <script src="/javascripts/angular.min.js" type="text/javascript"></script>
+  <script src="/javascripts/comment.js" type="text/javascript"></script>
 </head>
 <body>
 @include('layouts.header')
@@ -45,5 +47,6 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
   <script src="/javascripts/script.js" type="text/javascript"></script>
+
 </body>
 </html>

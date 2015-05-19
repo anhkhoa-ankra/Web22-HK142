@@ -29,4 +29,8 @@ class Post extends Model {
     return "/" . $this->category->slug . "/" . $this->slug;
   }
 
+  public function comments() {
+    return $this->hasMany('App\Comment');
+  }
+
 }

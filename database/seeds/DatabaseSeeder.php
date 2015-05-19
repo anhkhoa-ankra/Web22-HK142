@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\User;
 use App\Category;
 use App\Post;
-
+use App\Comment;
 class DatabaseSeeder extends Seeder {
 
 	/**
@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder {
 		$this->call('UserTableSeeder');
 		$this->call('CategoryTableSeeder');
 		$this->call('PostTableSeeder');
+		$this->call('CommentsTableSeeder');
 	}
 
 }
@@ -33,6 +34,30 @@ class UserTableSeeder extends Seeder {
 		User::create([
 			'name' => 'Admin',
 			'email' => 'admin@bkitsec.com',
+			'password' => Hash::make('123456789'),
+		]);
+
+		User::create([
+			'name' => 'NgoKhacVu',
+			'email' => 'ngokhacvu@bkitsec.com',
+			'password' => Hash::make('123456789'),
+		]);
+
+		User::create([
+			'name' => 'AnhKhoa',
+			'email' => 'anhkhoa@bkitsec.com',
+			'password' => Hash::make('123456789'),
+		]);
+
+		User::create([
+			'name' => 'NhuVan',
+			'email' => 'nhuvan@bkitsec.com',
+			'password' => Hash::make('123456789'),
+		]);		
+
+		User::create([
+			'name' => 'phuc',
+			'email' => 'phuc@bkitsec.com',
 			'password' => Hash::make('123456789'),
 		]);
 	}
@@ -355,6 +380,71 @@ class PostTableSeeder extends Seeder {
 			'category_id' => 5,
 			'slug' => 'samsung-rot-hang-the-tham-tai-thi-truong-kho-tinh-nhat-the-gioi',
 			'posted_at' => '2015-05-13 13:20:00',
+		]);
+	}
+}
+
+class CommentsTableSeeder extends Seeder {
+
+	public function run()
+	{
+		DB::table('comments')->delete();
+
+		Comment::create([
+			'post_id' => '1',
+			'user_id' => '2',
+			'name' => 'NgoKhacVu',
+			'email' => 'ngokhacvu@gmail.com',
+			'website' => 'http://ngokhacvu.com',
+			'ip' => '8.8.8.8',
+			'content' => 'Bai nay hay qua, cam on admin. :)))))) ',
+			'approved' => true,
+		]);
+		
+		Comment::create([
+			'post_id' => '1',
+			'user_id' => '3',
+			'name' => 'AnhKhoa',
+			'email' => 'anhkhoa@gmail.com',
+			'website' => 'http://anhkhoa.com',
+			'ip' => '8.8.8.8',
+			'content' => 'Bai nay hay qua, cam on admin, cam on cac ban. :)))))) ',
+			'approved' => true,
+		]);
+
+		Comment::create([
+			'post_id' => '1',
+			'user_id' => '4',
+			'parent_id' => '2',
+			'name' => 'NhuVan',
+			'email' => 'nhuvan@gmail.com',
+			'website' => 'http://NhuVan.com',
+			'ip' => '8.8.8.8',
+			'content' => 'Ban Vu comment hay qua, em like manh :)))))) ',
+			'approved' => true,
+		]);
+
+		Comment::create([
+			'post_id' => '1',
+			'user_id' => '5',
+			'name' => 'Phuc',
+			'email' => 'phuc@gmail.com',
+			'website' => 'http://phuc.com',
+			'ip' => '8.8.8.8',
+			'content' => 'Trang web dep qua, admin chi e lam voi. :)))))) ',
+			'approved' => true,
+		]);
+
+		Comment::create([
+			'post_id' => '1',
+			'user_id' => '1',
+			'parent_id' => '3',
+			'name' => 'Admin',
+			'email' => 'Admin@gmail.com',
+			'website' => 'http://admin.com',
+			'ip' => '8.8.8.8',
+			'content' => 'Uhm, tao lam do, tui bay khen hoai.',
+			'approved' => true,
 		]);
 	}
 }

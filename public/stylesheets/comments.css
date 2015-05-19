@@ -40,11 +40,11 @@
 .h4-line a:link{
 	color: white;
 }
-.line-blue {
+.line-comment-blue {
 	text-align: left;
 	border-bottom: 2px solid #003399;	
 }
-.line-red {
+.line-comment-red {
 	text-align: right;
 	border-bottom: 1px solid #808080;
 }
