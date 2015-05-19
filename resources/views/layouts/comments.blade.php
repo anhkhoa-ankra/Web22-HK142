@@ -49,4 +49,20 @@
 			  	</div>
 		  	</div>
 		</div>
+		<div class="comments-form">
+		<div><h4><span>Leave A Reply</span></h4></div>
+		<form>
+			<p>Your email address will not be published.</p>
+			<p><input ng-model="user.name" class="form-control" name="author" id="author" type="text" value="" size="45" aria-required="true" placeholder="Your Name"></p>
+			<p><input ng-model="user.mail" class="form-control" name="email" id="email" type="text" value="" size="45" aria-required="true" placeholder="Your Email"></p>
+			<p><input ng-model="user.website" class="form-control" name="url" id="url" type="text" value="" size="45" placeholder="Your Website"></p>
+			<p>
+			<textarea ng-model="user.content" class="form-control" name="comment" id="comment" rows="10" aria-required="true" placeholder="Your Comment"></textarea>
+			</p>
+			<p class="form-submit text-right">
+
+			<input ng-click="user.submit()" name="submit" type="submit" id="comment-submit" class="btn btn-primary" value="Post Comment">
+			</p>
+		</form>
+		</div>
 </div>
