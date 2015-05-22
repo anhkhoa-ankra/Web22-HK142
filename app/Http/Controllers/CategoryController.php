@@ -57,8 +57,19 @@ class CategoryController extends Controller {
 	 */
 	public function show($category)
 	{
-		// TODO: query category, not fount, throw 404
-		return view('category');
+		// Uncategorized post will be on root
+		$post = Post::where('slug', '=', $category)->take(1)->get();
+		if (count($post) > 0 && $post[0]->category_id == 1)
+			return view('post', ['post' => $post[0]]);
+
+		// where else
+		$cat = Category::where('slug', '=', $category)->take(1)->get();
+		if (count($cat) == 0)
+			abort(404);
+
+		$cat = $cat[0];
+		if ($cat->id != 1)
+			return view('category', ['category' => $cat]);
 	}
 
 	/**

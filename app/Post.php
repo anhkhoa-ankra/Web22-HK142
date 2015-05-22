@@ -26,7 +26,10 @@ class Post extends Model {
   }
 
   public function url() {
-    return "/" . $this->category->slug . "/" . $this->slug;
+    if ($this->category_id == 1)
+      return "/" . $this->slug;
+    else
+      return "/" . $this->category->slug . "/" . $this->slug;
   }
 
   public function comments() {

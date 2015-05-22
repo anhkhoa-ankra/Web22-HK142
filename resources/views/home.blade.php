@@ -5,8 +5,8 @@
 <?php $haveSlider = true; ?>
 
 @section('content')
-@include('layouts.categoryWidget.type1', ['category' => 1])
-@include('layouts.categoryWidget.type2', ['category' => 2])
+@include('layouts.categoryWidget.type1', ['category' => 4])
+@include('layouts.categoryWidget.type2', ['category' => 5])
 <div class="row">
     <div class="col-sm-3">
        <div class="name-catelogy-blue">
@@ -57,5 +57,5 @@
 		</div>
 	</div>
 </div>
-@include('layouts.categoryWidget.dual', ['cat1' => 3, 'cat2' => 4])
+@include('layouts.categoryWidget.dual', ['cat1' => 6, 'cat2' => 7])
 @endsection
