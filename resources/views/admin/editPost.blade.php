@@ -9,11 +9,11 @@
 @endif
 
 @section('control')
-<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-save"></span>&nbsp;&nbsp;{{ isset($post)? "Save" : "Publish" }}</button>
+<button onclick="document.post.submit()" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-save"></span>&nbsp;&nbsp;{{ isset($post)? "Save" : "Publish" }}</button>
 @stop
 
 @section('content')
-<form method="POST" action="{{ isset($post)? "/admin/post/" . $post->id : "/admin/post" }}">
+<form method="POST" name="post" action="{{ isset($post)? "/admin/post/" . $post->id : "/admin/post" }}">
 @if(isset($post))
   <input type="hidden" name="_method" value="PUT">
 @endif
@@ -53,7 +53,6 @@ $categories = Category::all();
   <div class="form-group">
     @include('layouts.ckEditorWidget', ['id' => 'post-content', 'content' => (isset($post)) ? $post->content : ""])
   </div>
-  <button type="submit" class="btn btn-primary">{{ isset($post)? "Save" : "Publish" }}</button>
 </form>
 @include('layouts.editCategoryWidget', ['id' => 'myModal'])
 @endsection

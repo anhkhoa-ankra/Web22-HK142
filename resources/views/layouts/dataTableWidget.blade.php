@@ -18,7 +18,7 @@ $('#table_id').DataTable({
         "data": "category"
       }, {
         "title": "Date",
-        "data": "date"
+        "data": "date.date"
       }, {
         "title": "Actions",
         "orderable": false,
