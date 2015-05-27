@@ -9,6 +9,6 @@
 @stop
 
 @section('content')
-@include('layouts.editCategoryWidget', ['id' => 'myModal'])
-@include('layouts.dataTableWidget')
+@include('layouts.EditCategoryWidget', ['id' => 'myModal'])
+@include('layouts.AllCategoryWidget')
 @endsection

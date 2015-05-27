@@ -5,5 +5,5 @@
 @section('title', 'All Posts')
 
 @section('content')
-@include('layouts.dataTableWidget')
+@include('layouts.AllPostWidget', ['id' => 'posts-datatable'])
 @endsection

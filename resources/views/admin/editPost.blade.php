@@ -38,8 +38,8 @@
 use App\Category;
 $categories = Category::all();
 ?>
-@foreach ($categories as $category)
-          <option value="{{$category->id}}"@if (isset($post) && $post->category->id == $category->id) {{'selected'}}@endif>{{$category->name}}</option>
+@foreach ($categories as $cat)
+          <option value="{{$cat->id}}"@if (isset($post) && $post->category->id == $cat->id) {{'selected'}}@endif>{{$cat->name}}</option>
 @endforeach
         </select>
       </div>
@@ -54,5 +54,5 @@ $categories = Category::all();
     @include('layouts.ckEditorWidget', ['id' => 'post-content', 'content' => (isset($post)) ? $post->content : ""])
   </div>
 </form>
-@include('layouts.editCategoryWidget', ['id' => 'myModal'])
+@include('layouts.EditCategoryWidget', ['id' => 'myModal'])
 @endsection

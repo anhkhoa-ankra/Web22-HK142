@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BK Web 22 - @yield('title')</title>
   <link href="/stylesheets/app.css" rel="stylesheet">
@@ -103,6 +104,11 @@ if (!isset($sub_current)) {
   <script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.js"></script>
   <script src="//cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.js"></script>
   <script>
+$.ajaxSetup({
+  headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  }
+});
 @yield('script')
   </script>
 </body>
