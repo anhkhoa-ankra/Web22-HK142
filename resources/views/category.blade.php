@@ -2,8 +2,6 @@
 @section('title', 'Category')
 @section('content')
 <?php
-use App\Category;
-$cat = Category::find(1);
 $posts = $cat->posts->sortByDesc(function($post) {
     return $post->posted_at;
 })->take(5);

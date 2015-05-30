@@ -5,6 +5,9 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
+use App\Category;
+use App\Post;
+
 class CategoryController extends Controller {
 
 	/**
@@ -69,7 +72,7 @@ class CategoryController extends Controller {
 
 		$cat = $cat[0];
 		if ($cat->id != 1)
-			return view('category', ['category' => $cat]);
+			return view('category', ['cat' => $cat]);
 	}
 
 	/**
