@@ -26,7 +26,7 @@ $posts = $cat->posts->sortByDesc(function($post) {
         </a>
       </div>
       <div class="col-sm-5">
-  @include('layouts.homePostWidget.full', ['post' => $posts[0]])
+  @include('layouts.HomePostWidget.full', ['post' => $posts[0]])
       </div>
     </div>
     <div class="row">
@@ -34,7 +34,7 @@ $posts = $cat->posts->sortByDesc(function($post) {
         <ul class="list-group">
   @for ($i = 1; $i < count($posts); $i+=2)
           <li class="list-group-item">
-  @include('layouts.homePostWidget.small', ['post' => $posts[$i]])
+  @include('layouts.HomePostWidget.small', ['post' => $posts[$i]])
           </li>
   @endfor
         </ul>
@@ -43,7 +43,7 @@ $posts = $cat->posts->sortByDesc(function($post) {
         <ul class="list-group">
   @for ($i = 2; $i < count($posts); $i+=2)
           <li class="list-group-item">
-  @include('layouts.homePostWidget.small', ['post' => $posts[$i]])
+  @include('layouts.HomePostWidget.small', ['post' => $posts[$i]])
           </li>
   @endfor
         </ul>

@@ -22,7 +22,7 @@ $posts = $cat->posts->sortByDesc(function($post) {
         <figure style="background-image: url(<?php echo $posts[0]->featured_img; ?>);" class="fixedratio"></figure>
       </div>
     </a>
-@include('layouts.homePostWidget.full', ['post' => $posts[0]])
+@include('layouts.HomePostWidget.full', ['post' => $posts[0]])
     <div style="margin-top:50px;">
 @for ($i = 1; $i < count($posts); $i++)
       <div class="title-news-1">
@@ -54,7 +54,7 @@ $posts = $cat->posts->sortByDesc(function($post) {
       </div>
     </a>
     <div style="max-height:250px;">
-  @include('layouts.homePostWidget.small', ['post' => $posts[0]])
+  @include('layouts.HomePostWidget.small', ['post' => $posts[0]])
     </div>
     <div style="margin-top:50px;">
 @for ($i = 1; $i < count($posts); $i++)

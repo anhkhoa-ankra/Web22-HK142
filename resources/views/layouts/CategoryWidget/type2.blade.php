@@ -23,13 +23,13 @@ $posts = $cat->posts->sortByDesc(function($post) {
           <figure style="background-image: url(<?php echo $posts[0]->featured_img; ?>);" class="fixedratio"></figure>
         </div>
       </a>
-@include('layouts.homePostWidget.full', ['post' => $posts[0]])
+@include('layouts.HomePostWidget.full', ['post' => $posts[0]])
     </div>
     <div class="col-sm-6">
       <ul class="list-group">
 @for ($i = 1; $i < count($posts); $i++)
         <li class="list-group-item">
-@include('layouts.homePostWidget.small', ['post' => $posts[$i]])
+@include('layouts.HomePostWidget.small', ['post' => $posts[$i]])
         </li>
 @endfor
       </ul>
