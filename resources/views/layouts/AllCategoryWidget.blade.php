@@ -2,23 +2,17 @@
 @section('script')
 @parent
 $('#table_id').DataTable({
-  "ajax": "/admin/post",
+  "ajax": "/admin/category",
   "columns": [
       {
-        "title": "Title",
-        "data": "title",
+        "title": "Name",
+        "data": "name",
         "render": function (data, type, row) {
           return '<a href="' + row.url + '" target="_blank">' + data + '</a>';
         }
       }, {
-        "title": "Author",
-        "data": "author"
-      }, {
-        "title": "Category",
-        "data": "category"
-      }, {
-        "title": "Date",
-        "data": "date.date"
+        "title": "Parent",
+        "data": "parent"
       }, {
         "title": "Actions",
         "orderable": false,
@@ -31,7 +25,7 @@ $('#table_id').DataTable({
         }
       }
   ],
-  "order": [3, "desc"],
+  "order": [1, "desc"],
   "createdRow": function(row, data, dataIndex) {
     $('a[title="Delete"]', row).click(function() {
       if (confirm('Are you sure you want to delete this item?')) {

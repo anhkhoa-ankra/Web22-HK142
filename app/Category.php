@@ -10,11 +10,11 @@ class Category extends Model {
   }
 
   public function parent() {
-    return $this->belongsTo('App\Post');
+    return $this->belongsTo('App\Category');
   }
 
   public function childs() {
-    return $this->hasMany('App\Post', 'parent_id');
+    return $this->hasMany('App\Category', 'parent_id');
   }
 
   public function url() {

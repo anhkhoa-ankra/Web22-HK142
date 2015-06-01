@@ -26,10 +26,22 @@ class CategoryController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(Request $request)
 	{
 		//
-		return view('admin.categories');
+		if ($request->ajax()) {
+			return response()->json(array("data" => Category::all()->map(function ($category) {
+				return array(
+					"id" => $category->id,
+					"name" => $category->name,
+					"url" => $category->url(),
+					"parent" => $category->parent ? $category->parent->name : "None",
+					"parent_id" => $category->parent_id,
+				);
+			})));
+		} else {
+			return view('admin.categories');
+		}
 	}
 
 	/**
