@@ -18,13 +18,13 @@ class CommentController extends Controller {
 	{
 		//
 		if ($request->has('post')) {
-			$comments = Comment::where('post_id', $request->input('post'));
+			$comments = Comment::where('post_id', $request->input('post'))->get();
 
 			$result = [];
 			foreach ($comments as $comment) {
 
 				$childs = [];
-				foreach ($comments->childs as $cmdChilds) {
+				foreach (Comment::where('parent_id', $comment->id)->get() as $cmdChilds) {
 					array_push($childs, array(
 						"id" => $cmdChilds->id,
 						"name" => $cmdChilds->name,
@@ -45,7 +45,6 @@ class CommentController extends Controller {
 					"childs" => $childs,
 				));
 			}
-
 			return response()->json($result);
 		}
 	}
