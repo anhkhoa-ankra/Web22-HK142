@@ -1,10 +1,14 @@
 //javascript variable
 var today = new Date();
+function abc(){
+  var post_id = $('#post_id').text();
+  alert(post_id);
+}
 
 //angular variable
 var commentsApp = angular.module('commentsApp',[]);
 
-commentsApp.controller('CommentListCtrl', function ($scope) {
+commentsApp.controller('CommentListCtrl', function ($scope, $http) {
   $scope.fuck = 'fuck yeaeh';
   $scope.list = [
     {	id: 1,
@@ -47,4 +51,18 @@ commentsApp.controller('CommentListCtrl', function ($scope) {
 
 	$scope.list.push($scope.user.new);
   };
+  $scope.abc = {};
+  $scope.load_comments = function(){
+    var post_id = $('#post_id').text();
+    $scope.link = "/comment?post=" + post_id;
+    $http({
+      method: 'GET',
+      url: $scope.link
+      }).success(function(data) {
+        console.log(data);
+        alert(data);
+    }).error(function(error) {
+      console.log(error);
+    });
+  }
 });

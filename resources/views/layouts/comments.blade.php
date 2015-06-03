@@ -1,8 +1,9 @@
 <div ng-app="commentsApp"  ng-controller="CommentListCtrl" class="comments-list">
 	<h2 class="line-comment-blue">
-		<span class="h2-line">3s Comments</span>
+		<div id="post_id" style="display:none;"><?php echo $post->id?></div>
+		<span class="h2-line" onclick="abc()">3s Comments @{{link}}</span>
 	</h2>	
-		 <div ng-repeat="comment in list">
+		 <div  ng-repeat="comment in list">
 			<div ng-if="comment.IDparent == undefined" class="row comments-item">
 				<div class="col-sm-2"><img class="user-img thumbnail" src="http://now.avg.com/wp-content/themes/AVG_Now/assets/images/default_user.png"></div>
 			  	<div class="col-sm-10">
@@ -49,7 +50,7 @@
 			  	</div>
 		  	</div>
 		</div>
-		<div class="comments-form">
+		<div class="comments-form" ng-init="load_comments()">
 		<div><h4><span>Leave A Reply</span></h4></div>
 		<form>
 			<p>Your email address will not be published.</p>
