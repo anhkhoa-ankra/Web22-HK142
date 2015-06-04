@@ -16,7 +16,7 @@ commentsApp.controller('CommentListCtrl', function ($scope, $http) {
     $scope.comments.new();
     if($scope.checkReply){
       for(i = 0; i < $scope.comments.list.length; i++){
-
+        //neu comment la reply
         if($scope.comments.list[i].id == $scope.reply.id){
           $scope.comments.list[i].childs.push($scope.comments.data);
           $.post("/comment",
@@ -36,6 +36,7 @@ commentsApp.controller('CommentListCtrl', function ($scope, $http) {
       }
     }else{
       $scope.comments.add($scope.comments.data);
+      //comment cho bai post
       $.post("/comment",
         {
           'post': $scope.comments.data.id,
