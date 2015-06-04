@@ -438,7 +438,7 @@ class CommentsTableSeeder extends Seeder {
 		Comment::create([
 			'post_id' => '1',
 			'user_id' => '4',
-			'parent_id' => '2',
+			'parent_id' => '1',
 			'name' => 'NhuVan',
 			'email' => 'nhuvan@gmail.com',
 			'website' => 'http://NhuVan.com',
@@ -461,7 +461,7 @@ class CommentsTableSeeder extends Seeder {
 		Comment::create([
 			'post_id' => '1',
 			'user_id' => '1',
-			'parent_id' => '3',
+			'parent_id' => '2',
 			'name' => 'Admin',
 			'email' => 'Admin@gmail.com',
 			'website' => 'http://admin.com',

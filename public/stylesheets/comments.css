@@ -19,6 +19,10 @@
 .comments-user-name {
 	font-size: 12pt;
 	font-weight: bold;
+	margin: auto;
+}
+.comments-content {
+	margin: auto;
 }
 .h2-line {
 	font-size: 20px;
@@ -40,6 +44,9 @@
 .h4-line a:link{
 	color: white;
 }
+.h4-line a:visited{
+	color: white;
+}
 .line-comment-blue {
 	text-align: left;
 	border-bottom: 2px solid #003399;	
@@ -47,4 +54,17 @@
 .line-comment-red {
 	text-align: right;
 	border-bottom: 1px solid #808080;
+	margin-top: 0;
+}
+.cancel-comment {
+	background-color: #707070;
+	padding: 3px 10px 3px 10px;
+}
+.cancel-comment a:link{
+	color: white;
+	text-decoration: none;
+}
+.cancel-comment a:visited{
+	color: white;
+	text-decoration: none;
 }
