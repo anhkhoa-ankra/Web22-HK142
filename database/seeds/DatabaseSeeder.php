@@ -6,6 +6,8 @@ use App\User;
 use App\Category;
 use App\Post;
 use App\Comment;
+use App\Setting;
+
 class DatabaseSeeder extends Seeder {
 
 	/**
@@ -21,6 +23,7 @@ class DatabaseSeeder extends Seeder {
 		$this->call('CategoryTableSeeder');
 		$this->call('PostTableSeeder');
 		$this->call('CommentsTableSeeder');
+		$this->call('SettingTableSeeder');
 	}
 
 }
@@ -468,6 +471,19 @@ class CommentsTableSeeder extends Seeder {
 			'ip' => '8.8.8.8',
 			'content' => 'Uhm, tao lam do, tui bay khen hoai.',
 			'approved' => true,
+		]);
+	}
+}
+
+class SettingTableSeeder extends Seeder {
+
+	public function run()
+	{
+		DB::table('settings')->delete();
+
+		Setting::create([
+			'key' => 'force_ssl',
+			'value' => App::environment('local')?'false':'true',
 		]);
 	}
 }
