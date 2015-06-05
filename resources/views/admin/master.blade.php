@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BK Web 22 - @yield('title')</title>
+  <title>BKITSec - @yield('title')</title>
   <link href="/stylesheets/app.css" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheets/dashboard.css">
   <link href='//fonts.googleapis.com/css?family=Roboto:400italic,700italic,300,700,300italic,400&subset=latin,vietnamese,latin-ext' rel='stylesheet' type='text/css'>
@@ -21,7 +21,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">BKWeb22</a>
+        <a class="navbar-brand" href="/">BKITSec</a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">

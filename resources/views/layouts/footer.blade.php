@@ -95,7 +95,7 @@ for ($i=0; $i < count($posts); $i++) {
     <a href="#top">Back to top</a>
     </p>
     <p>
-    &copy; BKWeb22 2015 · <a href="#">Privacy</a> · <a href="#">Terms</a>
+    &copy; BKITSec 2015 · <a href="#">Privacy</a> · <a href="#">Terms</a>
     </p>
   </div>
 </footer>
