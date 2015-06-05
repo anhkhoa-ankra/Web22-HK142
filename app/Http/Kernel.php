@@ -24,6 +24,8 @@ class Kernel extends HttpKernel {
 	 * @var array
 	 */
 	protected $routeMiddleware = [
+		'ssl.force' => 'App\Http\Middleware\SSLForce',
+		'ssl.prevent' => 'App\Http\Middleware\SSLPrevent',
 		'auth' => 'App\Http\Middleware\Authenticate',
 		'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
 		'guest' => 'App\Http\Middleware\RedirectIfAuthenticated',

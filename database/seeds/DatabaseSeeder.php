@@ -482,7 +482,7 @@ class SettingTableSeeder extends Seeder {
 		DB::table('settings')->delete();
 
 		Setting::create([
-			'key' => 'force_ssl',
+			'id' => 'force_ssl',
 			'value' => App::environment('local')?'false':'true',
 		]);
 	}

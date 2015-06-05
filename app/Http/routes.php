@@ -11,12 +11,18 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
-Route::get('home', 'HomeController@index');
-Route::resource('comment', 'CommentController', ['only' => ['index', 'store']]);
+use App\Setting;
 
-Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function()
-{
+$adminMiddleware = ['auth'];
+
+if (Setting::find('force_ssl') == 'true') {
+    array_push($adminMiddleware, 'ssl.force');
+}
+
+Route::group([
+    'middleware' => $adminMiddleware,
+    'prefix' => 'admin'
+], function() {
     Route::get('/', 'AdminController@index');
 
     Route::get('phpinfo', function () {
@@ -38,5 +44,10 @@ Route::controllers([
   'password' => 'Auth\PasswordController',
 ]);
 
-Route::get('{category}', 'CategoryController@show');
-Route::get('{category}/{post}', 'PostController@show');
+Route::group(['middleware' => 'ssl.prevent'], function() {
+    Route::get('/', 'HomeController@index');
+    Route::get('home', 'HomeController@index');
+    Route::resource('comment', 'CommentController', ['only' => ['index', 'store']]);
+    Route::get('{category}', 'CategoryController@show');
+    Route::get('{category}/{post}', 'PostController@show');
+});
