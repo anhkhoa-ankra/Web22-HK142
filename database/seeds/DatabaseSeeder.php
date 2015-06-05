@@ -112,8 +112,8 @@ class CategoryTableSeeder extends Seeder {
 		]);
 		
 		Category::create([
-			'name' => 'Khoa học và Số hóa',
-			'slug' => 'khoa-hoc-va-so-hoa',
+			'name' => 'Số hóa',
+			'slug' => 'so-hoa',
 			'id'=>'7',
 			'parent_id' => '3',
 		]);
