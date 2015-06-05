@@ -38,7 +38,7 @@ class AuthController extends Controller {
 
 		$this->middleware('guest', ['except' => 'getLogout']);
 
-		if (Setting::find('force_ssl') == 'true') {
+		if (Setting::find('force_ssl')->value == 'true') {
 			$this->middleware('ssl.force');
 		}
 	}

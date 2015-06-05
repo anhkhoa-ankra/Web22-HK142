@@ -34,7 +34,7 @@ class PasswordController extends Controller {
 
 		$this->middleware('guest');
 
-		if (Setting::find('force_ssl') == 'true') {
+		if (Setting::find('force_ssl')->value == 'true') {
 			$this->middleware('ssl.force');
 		}
 	}
