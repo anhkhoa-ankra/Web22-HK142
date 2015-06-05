@@ -14,7 +14,7 @@ class SSLPrevent {
 	public function handle($request, Closure $next)
 	{
 		if($request->secure()) {
-			return redirect()->to($request->path());
+			return redirect()->to($request->path(), 302, array(), false);
 		}
 		return $next($request);
 	}
