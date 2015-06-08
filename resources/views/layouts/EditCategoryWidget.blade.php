@@ -109,6 +109,7 @@ $('#{{$id or 'myModal'}}-save').click(function() {
 @endif
 });
 $('#{{$id or 'myModal'}}').on('show.bs.modal', function (event) {
+  $("#{{$id or 'myModal'}}-cat-name").val("");
 @if (isset($isEdit) && $isEdit)
 {{-- edit mode --}}
   var button = $(event.relatedTarget);
@@ -121,7 +122,6 @@ $('#{{$id or 'myModal'}}').on('show.bs.modal', function (event) {
   $("#{{$id or 'myModal'}}-cat-parent" ,this).data('id', button.data("parent"));
   $("#{{$id or 'myModal'}}-save" ,this).data('id', button.data("id"));
 @endif
-  $("#{{$id or 'myModal'}}-cat-name").val("");
   $("#{{$id or 'myModal'}}-refresh").click();
 });
 @append
