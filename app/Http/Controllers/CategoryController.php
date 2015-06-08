@@ -49,7 +49,7 @@ class CategoryController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function create()
+	public function create(Request $request)
 	{
 		//
 	}
@@ -106,9 +106,17 @@ class CategoryController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update(Request $request, $id)
 	{
 		//
+		$cat = Category::find($id);
+		$cat->name = $request->input("name");
+		$cat->slug = $cat->getSlugFromName();
+		$cat->parent_id = $request->input("parent");
+
+		$cat->save();
+
+		return response()->json(['code' => 0, 'message' => 'success']);
 	}
 
 	/**

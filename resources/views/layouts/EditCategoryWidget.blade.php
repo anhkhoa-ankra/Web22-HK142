@@ -64,11 +64,28 @@ $('#{{$id or 'myModal'}}-save').click(function() {
     $("#{{$id or 'myModal'}}").modal('hide');
     return;
   }
+  $.ajax({
+    "url": "/admin/category/" + $(this).data("id"),
+    "method": "put",
+    "data": {
+      "name": $("#{{$id or 'myModal'}}-cat-name").val(),
+      "parent": $("#{{$id or 'myModal'}}-cat-parent").val()
+    }, "complete": function (jqXHR, status) {
+      console.log(jqXHR);
+      console.log(status);
+      if (jqXHR.status != 200) {
+        alert("Something went wrong!");
+      } else {
+@if (isset($datatable))
+        {{$datatable}}.ajax.reload(null, false);
+@endif
+        alert("Category edit successfully!");
+      }
+      $("#{{$id or 'myModal'}}").modal('hide');
+    }
+  })
 @else
 {{-- new mode --}}
-@endif
-@if (isset($datatable))
-  {{$datatable}}.ajax.reload(null, false);
 @endif
 });
 $('#{{$id or 'myModal'}}').on('show.bs.modal', function (event) {
