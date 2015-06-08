@@ -45,8 +45,8 @@ var {{$id or 'post_table'}} = $('#{{$id or 'post_table'}}').DataTable({
             if (jqXHR.status != 200) {
               alert("Something went wrong!");
             } else {
-              alert("Post deleted!");
               {{$id or 'post_table'}}.ajax.reload(null, false);
+              alert("Post deleted!");
             }
           }
         });

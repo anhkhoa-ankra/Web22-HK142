@@ -86,6 +86,26 @@ $('#{{$id or 'myModal'}}-save').click(function() {
   })
 @else
 {{-- new mode --}}
+  $.ajax({
+    "url": "/admin/category",
+    "method": "post",
+    "data": {
+      "name": $("#{{$id or 'myModal'}}-cat-name").val(),
+      "parent": $("#{{$id or 'myModal'}}-cat-parent").val()
+    }, "complete": function (jqXHR, status) {
+      console.log(jqXHR);
+      console.log(status);
+      if (jqXHR.status != 200) {
+        alert("Something went wrong!");
+      } else {
+  @if (isset($datatable))
+        {{$datatable}}.ajax.reload(null, false);
+  @endif
+        alert("Category add successfully!");
+      }
+      $("#{{$id or 'myModal'}}").modal('hide');
+    }
+  })
 @endif
 });
 $('#{{$id or 'myModal'}}').on('show.bs.modal', function (event) {
@@ -101,6 +121,7 @@ $('#{{$id or 'myModal'}}').on('show.bs.modal', function (event) {
   $("#{{$id or 'myModal'}}-cat-parent" ,this).data('id', button.data("parent"));
   $("#{{$id or 'myModal'}}-save" ,this).data('id', button.data("id"));
 @endif
+  $("#{{$id or 'myModal'}}-cat-name").val("");
   $("#{{$id or 'myModal'}}-refresh").click();
 });
 @append

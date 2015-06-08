@@ -1,6 +1,6 @@
 <table id="{{$id or 'cat_table'}}" class="table table-striped table-hover"></table>
 @section('script')
-var {{$id or 'post_table'}} = $('#{{$id or 'post_table'}}').DataTable({
+var {{$id or 'cat_table'}} = $('#{{$id or 'cat_table'}}').DataTable({
   "ajax": "/admin/category",
   "responsive": true,
   "columns": [
@@ -30,7 +30,20 @@ var {{$id or 'post_table'}} = $('#{{$id or 'post_table'}}').DataTable({
     $('a[title="Delete"]', row).click(function() {
       if (confirm('Are you sure you want to delete this item?')) {
         // Create delete ajax
-        console.log($(this).data("category"));
+        $.ajax({
+          url: '/admin/category/' + $(this).data("category"),
+          type: 'DELETE',
+          complete: function (jqXHR, status) {
+            console.log(jqXHR);
+            console.log(status);
+            if (jqXHR.status != 200) {
+              alert("Something went wrong!");
+            } else {
+              {{$id or 'cat_table'}}.ajax.reload(null, false);
+              alert("Category deleted!");
+            }
+          }
+        });
       }
     });
   }

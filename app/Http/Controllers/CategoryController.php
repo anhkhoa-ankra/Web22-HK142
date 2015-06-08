@@ -49,7 +49,7 @@ class CategoryController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function create(Request $request)
+	public function create()
 	{
 		//
 	}
@@ -59,9 +59,21 @@ class CategoryController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
 		//
+		$cat = new Category;
+		$cat->name = $request->input("name");
+		$cat->slug = $cat->getSlugFromName();
+		if ($request->input("parent") == '0') {
+			$cat->parent_id == null;
+		} else {
+			$cat->parent_id = $request->input("parent");
+		}
+
+		$cat->save();
+
+		return response()->json(['code' => 0, 'message' => 'success']);
 	}
 
 	/**
@@ -112,7 +124,11 @@ class CategoryController extends Controller {
 		$cat = Category::find($id);
 		$cat->name = $request->input("name");
 		$cat->slug = $cat->getSlugFromName();
-		$cat->parent_id = $request->input("parent");
+		if ($request->input("parent") == '0') {
+			$cat->parent_id == null;
+		} else {
+			$cat->parent_id = $request->input("parent");
+		}
 
 		$cat->save();
 
@@ -128,6 +144,7 @@ class CategoryController extends Controller {
 	public function destroy($id)
 	{
 		//
+		Category::destroy($id);
 	}
 
 }
