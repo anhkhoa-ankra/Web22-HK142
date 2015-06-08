@@ -18,6 +18,9 @@ class Category extends Model {
   }
 
   public function url() {
-    return "/" . $this->slug;
+    if ($this->id == 1)
+      return "";
+    else
+      return "/" . $this->slug;
   }
 }

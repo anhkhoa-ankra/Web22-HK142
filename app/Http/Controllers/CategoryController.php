@@ -85,6 +85,8 @@ class CategoryController extends Controller {
 		$cat = $cat[0];
 		if ($cat->id != 1)
 			return view('category', ['cat' => $cat]);
+		else
+			abort(404);
 	}
 
 	/**
