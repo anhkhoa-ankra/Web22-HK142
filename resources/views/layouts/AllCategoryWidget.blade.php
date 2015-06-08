@@ -1,8 +1,8 @@
-<table id="table_id" class="table table-striped table-hover"></table>
+<table id="{{$id or 'cat_table'}}" class="table table-striped table-hover"></table>
 @section('script')
-@parent
-$('#table_id').DataTable({
+var {{$id or 'post_table'}} = $('#{{$id or 'post_table'}}').DataTable({
   "ajax": "/admin/category",
+  "responsive": true,
   "columns": [
       {
         "title": "Name",
@@ -19,9 +19,9 @@ $('#table_id').DataTable({
         "searchable": false,
         "class": "text-right no-highlight",
         "render": function (data, type, row) {
-          return '<a href="' + row.url + '" target="_blank" title="View"><span class="glyphicon glyphicon-eye-open"></span></a>&nbsp;&nbsp;\
-          <a href="/admin/post/' + row.id + '/edit" title="Edit"><span class="glyphicon glyphicon-edit"></span></a>&nbsp;&nbsp;\
-          <a href="#" data-post="' + row.id + '" title="Delete"><span class="glyphicon glyphicon-trash"></span></a>'
+          return '<a ' + ((row.url.length>0)?('href="' + row.url + '" target="_blank"'):('class="disabled"')) + ' title="View"><span class="glyphicon glyphicon-eye-' + (row.url.length>0?'open':'close') + '"></span></a>&nbsp;&nbsp;\
+          <a href="#" data-id="' + row.id + '" data-name="' + row.name + '" data-parent="' + row.parent_id + '" data-toggle="modal" data-target="#{{$modal}}" title="Edit"><span class="glyphicon glyphicon-edit"></span></a>&nbsp;&nbsp;\
+          <a href="#" data-category="' + row.id + '" title="Delete"><span class="glyphicon glyphicon-trash"></span></a>'
         }
       }
   ],
@@ -30,10 +30,9 @@ $('#table_id').DataTable({
     $('a[title="Delete"]', row).click(function() {
       if (confirm('Are you sure you want to delete this item?')) {
         // Create delete ajax
-        console.log($(this).data("post"));
+        console.log($(this).data("category"));
       }
-      return false;
     });
   }
 });
-@stop
+@append

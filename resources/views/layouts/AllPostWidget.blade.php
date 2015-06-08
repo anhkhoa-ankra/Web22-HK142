@@ -1,7 +1,8 @@
 <table id="{{$id or 'post_table'}}" class="table table-striped table-hover"></table>
 @section('script')
-var post_table = $('#{{$id or 'post_table'}}').DataTable({
+var {{$id or 'post_table'}} = $('#{{$id or 'post_table'}}').DataTable({
   "ajax": "/admin/post",
+  "responsive": true,
   "columns": [
       {
         "title": "Title",
@@ -45,7 +46,7 @@ var post_table = $('#{{$id or 'post_table'}}').DataTable({
               alert("Something went wrong!");
             } else {
               alert("Post deleted!");
-              post_table.ajax.reload(null, false);
+              {{$id or 'post_table'}}.ajax.reload(null, false);
             }
           }
         });
