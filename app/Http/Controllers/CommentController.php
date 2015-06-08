@@ -83,7 +83,7 @@ class CommentController extends Controller {
 
 			$comment->save();
 
-			return response()->json(['code' => 0, 'message' => 'success', 'id' => $post->id]);
+			return response()->json(['code' => 0, 'message' => 'success', 'id' => $comment->id]);
 		}
 	}
 
