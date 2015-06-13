@@ -14,7 +14,8 @@
 use App\Setting;
 
 $adminMiddleware = ['auth'];
-if (Setting::find('force_ssl')->value == 'true') {
+$force_ssl = Setting::find('force_ssl');
+if ($force_ssl && $force_ssl->value == 'true') {
     array_push($adminMiddleware, 'ssl.force');
 }
 
