@@ -31,6 +31,7 @@ Route::group([
 
     Route::resource('post', 'PostController', ['except' => ['show']]);
     Route::resource('category', 'CategoryController', ['except' => ['show', 'create']]);
+    Route::resource('comment', 'CommentController', ['only' => ['index', 'update', 'destroy']]);
     // Route::get('post', 'PostController@index');
     // Route::get('post/create', 'PostController@create');
     // Route::post('post', 'PostController@store');

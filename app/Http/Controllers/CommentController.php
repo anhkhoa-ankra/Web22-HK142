@@ -17,7 +17,7 @@ class CommentController extends Controller {
 	public function index(Request $request)
 	{
 		//
-		if ($request->has('post')) {
+		if ($request->ajax() && $request->has('post')) {
 			$comments = Comment::where('post_id', $request->input('post'))->get();
 
 			$result = [];
@@ -47,6 +47,8 @@ class CommentController extends Controller {
 			}
 			return response()->json($result);
 		}
+
+		// TODO: code admin here
 	}
 
 	/**
