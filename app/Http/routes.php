@@ -15,7 +15,7 @@ use App\Setting;
 
 $adminMiddleware = ['auth'];
 $force_ssl = Setting::find('force_ssl');
-if ($force_ssl && $force_ssl->value == 'true') {
+if ($force_ssl && ($force_ssl->value == 'true' || $force_ssl->value == '1')) {
     array_push($adminMiddleware, 'ssl.force');
 }
 
@@ -32,6 +32,7 @@ Route::group([
     Route::resource('post', 'PostController', ['except' => ['show']]);
     Route::resource('category', 'CategoryController', ['except' => ['show', 'create']]);
     Route::resource('comment', 'CommentController', ['only' => ['index', 'update', 'destroy']]);
+    Route::resource('setting', 'SettingController', ['only' => ['index', 'store']]);
     // Route::get('post', 'PostController@index');
     // Route::get('post/create', 'PostController@create');
     // Route::post('post', 'PostController@store');
