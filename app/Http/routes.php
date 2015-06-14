@@ -33,6 +33,9 @@ Route::group([
     Route::resource('category', 'CategoryController', ['except' => ['show', 'create']]);
     Route::resource('comment', 'CommentController', ['only' => ['index', 'update', 'destroy']]);
     Route::resource('setting', 'SettingController', ['only' => ['index', 'store']]);
+    Route::get('under_construction', function () {
+        return view('admin.UnderConstruction');
+    });
     // Route::get('post', 'PostController@index');
     // Route::get('post/create', 'PostController@create');
     // Route::post('post', 'PostController@store');
