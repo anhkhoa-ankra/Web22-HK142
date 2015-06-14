@@ -12,6 +12,7 @@
   <link href='http://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.css">
   <link rel="stylesheet" href="//cdn.datatables.net/responsive/1.0.6/css/dataTables.responsive.css">
+  <script src="/javascripts/admin.js" type="text/javascript"></script>
 </head>
 <body>
   <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -78,7 +79,7 @@ if (!isset($sub_current)) {
             </ul>
           </li>
           <li><a href=""><span class="glyphicon glyphicon-file"></span>&nbsp;&nbsp;Pages</a></li>
-          <li><a href=""><span class="glyphicon glyphicon-comment"></span>&nbsp;&nbsp;Comments</a></li>
+          <li><a href="/admin/comment"><span class="glyphicon glyphicon-comment"></span>&nbsp;&nbsp;Comments</a></li>
           <li><a href=""><span class="glyphicon glyphicon-camera"></span>&nbsp;&nbsp;Medias</a></li>
         </ul>
         <ul class="nav nav-sidebar">

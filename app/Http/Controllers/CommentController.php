@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 
 use App\Comment;
 
+use Auth;
+
 class CommentController extends Controller {
 
 	/**
@@ -16,8 +18,8 @@ class CommentController extends Controller {
 	 */
 	public function index(Request $request)
 	{
-		//
-		if ($request->ajax() && $request->has('post')) {
+		// client ajax
+		if($request->ajax() && $request->has('post')){
 			$comments = Comment::where('post_id', $request->input('post'))->get();
 
 			$result = [];
@@ -48,7 +50,28 @@ class CommentController extends Controller {
 			return response()->json($result);
 		}
 
-		// TODO: code admin here
+		// admin section
+		// check authenticated
+		if (!$request->user()) {
+			return;
+		}
+
+		if ($request->ajax()) {
+			return response()->json(array("data" => Comment::all()->map(function ($comment) {
+				return array(
+					"id" => $comment->id,
+					"name" => $comment->name,
+					"post" => $comment->post->title,
+					"email" => $comment->email,
+					"website" => $comment->website,
+					"content" => $comment->content,
+					"approved" => $comment->approved,
+					"date" => $comment->created_at,
+				);
+			})));
+		} else {
+			return view('admin.comment');
+		}
 	}
 
 	/**
@@ -98,6 +121,7 @@ class CommentController extends Controller {
 	public function show($id)
 	{
 		//
+
 	}
 
 	/**
@@ -109,6 +133,12 @@ class CommentController extends Controller {
 	public function edit($id)
 	{
 		//
+		$comment = Comment::find($id);
+		if (!isset($post)) {
+			abort(404);
+		}
+		return view('admin.editComment', ['comment' => $comment]);
+
 	}
 
 	/**
@@ -117,9 +147,19 @@ class CommentController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update(Request $request, $id)
 	{
 		//
+		$comment = Comment::find($id);
+		$comment->approved = 1;
+
+		$comment->save();
+
+		if ($request->ajax()) {
+			return response()->json(['code' => 0, 'message' => 'success']);
+		} else {
+			return redirect('admin/comment/' . $id);
+		}
 	}
 
 	/**
@@ -131,6 +171,7 @@ class CommentController extends Controller {
 	public function destroy($id)
 	{
 		//
+		Comment::destroy($id);
 	}
 
 }
