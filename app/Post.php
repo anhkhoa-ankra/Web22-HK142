@@ -1,6 +1,7 @@
 <?php namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Mews\Purifier\Facades\Purifier;
 
 class Post extends Model {
 
@@ -36,4 +37,11 @@ class Post extends Model {
     return $this->hasMany('App\Comment');
   }
 
+  public function getContentAttribute($value) {
+    return Purifier::clean($value);
+  }
+
+  // public function setContentAttribute($value) {
+  //   $this->attributes['content'] = Purifier::clean($value);
+  // }
 }

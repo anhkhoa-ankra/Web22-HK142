@@ -83,7 +83,7 @@ if (!isset($sub_current)) {
           <li><a href=""><span class="glyphicon glyphicon-camera"></span>&nbsp;&nbsp;Medias</a></li>
         </ul>
         <ul class="nav nav-sidebar">
-          <li><a href=""><span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;Appearance</a></li>
+          <li{!! ($current == 'appearance') ? ' class="active"' : '' !!}><a href="/admin/appearance"><span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;Appearance</a></li>
           <li><a href=""><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Users</a></li>
           <li><a href=""><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;Settings</a></li>
         </ul>
